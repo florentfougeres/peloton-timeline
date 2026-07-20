@@ -13,6 +13,7 @@
     CH: 'Suisse', DE: 'Allemagne', DK: 'Danemark', ES: 'Espagne', FR: 'France',
     GB: 'Royaume-Uni', IL: 'Israël', IT: 'Italie', KZ: 'Kazakhstan', LU: 'Luxembourg',
     NL: 'Pays-Bas', NO: 'Norvège', PL: 'Pologne', RU: 'Russie', US: 'États-Unis',
+    ZA: 'Afrique du Sud',
   };
 
   function flagEmoji(code) {
@@ -192,17 +193,30 @@
       ? `Active en ${maxYear} · ${CAT_LABEL[l.status]} · ${l.seasons} saisons depuis ${l.firstYear}`
       : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
 
+    function flagTitle(code) {
+      return `Licence UCI : ${escapeHtml(COUNTRY_NAME[code] || code)}`;
+    }
+
+    function renderFlags(seg) {
+      if (seg.countryPeriods) {
+        return seg.countryPeriods
+          .map((p) => {
+            const py = p.start === p.end ? `${p.start}` : `${p.start}–${p.end}`;
+            return `<span class="ti-flag" title="${flagTitle(p.country)} (${py})">${flagEmoji(p.country)}</span>`;
+          })
+          .join('');
+      }
+      return seg.country ? `<span class="ti-flag" title="${flagTitle(seg.country)}">${flagEmoji(seg.country)}</span>` : '';
+    }
+
     const items = l.segs
       .map((seg, idx) => {
         const yrs = seg.start === seg.end ? `${seg.start}` : `${seg.start}–${seg.end}`;
         const badge = seg.cat === 'special' ? '' : `<span class="ti-badge cat-${seg.cat}">${CAT_LABEL[seg.cat]}</span>`;
-        const flag = seg.country
-          ? `<span class="ti-flag" title="Licence UCI : ${escapeHtml(COUNTRY_NAME[seg.country] || seg.country)}">${flagEmoji(seg.country)}</span>`
-          : '';
         return `
         <div class="timeline-item cat-${seg.cat}" data-idx="${idx}">
           <div class="ti-years">${yrs}</div>
-          <div class="ti-name">${flag}${escapeHtml(seg.name)}</div>
+          <div class="ti-name"><span class="ti-flags">${renderFlags(seg)}</span>${escapeHtml(seg.name)}</div>
           ${badge}
         </div>`;
       })

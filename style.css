@@ -542,9 +542,14 @@ main {
   margin-top: 2px;
 }
 
+.ti-flags {
+  display: inline-flex;
+  gap: 2px;
+  margin-right: 6px;
+}
+
 .ti-flag {
   display: inline-block;
-  margin-right: 6px;
   font-size: 13px;
 }
 

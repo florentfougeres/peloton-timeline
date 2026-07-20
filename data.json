@@ -33,43 +33,50 @@
           "start": 2009,
           "end": 2015,
           "name": "BKCP-Powerplus",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2016,
           "end": 2016,
           "name": "BKCP-Corendon",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2017,
           "end": 2017,
           "name": "Beobank-Corendon",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2018,
           "end": 2019,
           "name": "Corendon-Circus",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2020,
           "end": 2022,
           "name": "Alpecin-Fenix",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2023,
           "end": 2025,
           "name": "Alpecin-Deceuninck",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Alpecin-Premier Tech",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         }
       ]
     },
@@ -82,19 +89,22 @@
           "start": 2017,
           "end": 2019,
           "name": "Bahrain-Merida",
-          "cat": "world"
+          "cat": "world",
+          "country": "BH"
         },
         {
           "start": 2020,
           "end": 2020,
           "name": "Bahrain-McLaren",
-          "cat": "world"
+          "cat": "world",
+          "country": "BH"
         },
         {
           "start": 2021,
           "end": 2026,
           "name": "Bahrain Victorious",
-          "cat": "world"
+          "cat": "world",
+          "country": "BH"
         }
       ]
     },
@@ -107,13 +117,15 @@
           "start": 2010,
           "end": 2012,
           "name": "Caja Rural",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "ES"
         },
         {
           "start": 2013,
           "end": 2026,
           "name": "Caja Rural-Seguros RGA",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "ES"
         }
       ]
     },
@@ -126,25 +138,29 @@
           "start": 2005,
           "end": 2009,
           "name": "Cofidis",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2010,
           "end": 2019,
           "name": "Cofidis",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2020,
           "end": 2025,
           "name": "Cofidis",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Cofidis",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         }
       ]
     },
@@ -157,37 +173,43 @@
           "start": 2005,
           "end": 2005,
           "name": "AG2R Prévoyance",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2006,
           "end": 2007,
           "name": "AG2R Prévoyance",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2008,
           "end": 2020,
           "name": "AG2R La Mondiale",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2021,
           "end": 2023,
           "name": "AG2R Citroën Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2024,
           "end": 2025,
           "name": "Decathlon AG2R La Mondiale",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Decathlon CMA CGM",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         }
       ]
     },
@@ -200,61 +222,71 @@
           "start": 2005,
           "end": 2006,
           "name": "Bretagne-Jean Floc'h",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2007,
           "end": 2008,
           "name": "Bretagne-Armor Lux",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2009,
           "end": 2012,
           "name": "Bretagne-Schuller",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2013,
           "end": 2015,
           "name": "Bretagne-Séché Environnement",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2016,
           "end": 2016,
           "name": "Fortuneo-Vital Concept",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2017,
           "end": 2017,
           "name": "Fortuneo-Oscaro",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2018,
           "end": 2018,
           "name": "Fortuneo-Samsic",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2019,
           "end": 2022,
           "name": "Arkéa-Samsic",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2023,
           "end": 2023,
           "name": "Team Arkéa-Samsic",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2024,
           "end": 2025,
           "name": "Arkéa-B&B Hotels",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2026,
@@ -273,85 +305,99 @@
           "start": 2005,
           "end": 2006,
           "name": "TIAA-CREF",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "US"
         },
         {
           "start": 2007,
           "end": 2007,
           "name": "Slipstream",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "US"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "Slipstream-Chipotle",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "US"
         },
         {
           "start": 2009,
           "end": 2009,
           "name": "Garmin-Slipstream",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "Garmin-Transitions",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2011,
           "end": 2011,
           "name": "Garmin-Cervélo",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2012,
           "end": 2014,
           "name": "Garmin-Sharp",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2015,
           "end": 2015,
           "name": "Cannondale-Garmin",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2016,
           "end": 2017,
           "name": "Cannondale-Drapac",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2018,
           "end": 2018,
           "name": "EF Education First-Drapac",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2019,
           "end": 2019,
           "name": "EF Education First",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2020,
           "end": 2020,
           "name": "EF Pro Cycling",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2021,
           "end": 2021,
           "name": "EF Education-Nippo",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2022,
           "end": 2026,
           "name": "EF Education-EasyPost",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         }
       ]
     },
@@ -364,67 +410,78 @@
           "start": 2008,
           "end": 2008,
           "name": "Willems Veranda's",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2009,
           "end": 2010,
           "name": "Veranda's Willems",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2011,
           "end": 2011,
           "name": "Veranda's Willems-Accent",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2012,
           "end": 2012,
           "name": "Accent Jobs-Willems Veranda's",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2013,
           "end": 2013,
           "name": "Accent Jobs-Wanty",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2014,
           "end": 2018,
           "name": "Wanty-Groupe Gobert",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2019,
           "end": 2019,
           "name": "Wanty-Gobert",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2020,
           "end": 2020,
           "name": "Circus-Wanty Gobert",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2021,
           "end": 2022,
           "name": "Intermarché-Wanty-Gobert Matériaux",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2023,
           "end": 2023,
           "name": "Intermarché-Circus-Wanty",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2024,
           "end": 2025,
           "name": "Intermarché-Wanty",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2026,
@@ -443,49 +500,57 @@
           "start": 2005,
           "end": 2009,
           "name": "La Française des jeux",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "FDJ",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2011,
           "end": 2011,
           "name": "FDJ",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2012,
           "end": 2012,
           "name": "FDJ-BigMat",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2013,
           "end": 2014,
           "name": "FDJ.fr",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2015,
           "end": 2017,
           "name": "FDJ",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2018,
           "end": 2025,
           "name": "Groupama-FDJ",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Groupama-FDJ United",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         }
       ]
     },
@@ -498,37 +563,54 @@
           "start": 2011,
           "end": 2011,
           "name": "Leopard-Trek",
-          "cat": "world"
+          "cat": "world",
+          "country": "LU"
         },
         {
           "start": 2012,
           "end": 2012,
           "name": "RadioShack-Nissan",
-          "cat": "world"
+          "cat": "world",
+          "country": "LU"
         },
         {
           "start": 2013,
           "end": 2013,
           "name": "RadioShack-Leopard",
-          "cat": "world"
+          "cat": "world",
+          "country": "LU"
         },
         {
           "start": 2014,
           "end": 2015,
           "name": "Trek Factory Racing",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2016,
           "end": 2022,
           "name": "Trek-Segafredo",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2023,
           "end": 2026,
           "name": "Lidl-Trek",
-          "cat": "world"
+          "cat": "world",
+          "countryPeriods": [
+            {
+              "start": 2023,
+              "end": 2025,
+              "country": "US"
+            },
+            {
+              "start": 2026,
+              "end": 2026,
+              "country": "DE"
+            }
+          ]
         }
       ]
     },
@@ -541,55 +623,64 @@
           "start": 2005,
           "end": 2006,
           "name": "Davitamon-Lotto",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2007,
           "end": 2007,
           "name": "Predictor-Lotto",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2008,
           "end": 2009,
           "name": "Silence-Lotto",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2010,
           "end": 2011,
           "name": "Omega Pharma-Lotto",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2012,
           "end": 2014,
           "name": "Lotto-Belisol",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2015,
           "end": 2022,
           "name": "Lotto-Soudal",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2023,
           "end": 2024,
           "name": "Lotto Dstny",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2025,
           "end": 2025,
           "name": "Lotto",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Lotto - Intermarché",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         }
       ]
     },
@@ -602,37 +693,43 @@
           "start": 2005,
           "end": 2005,
           "name": "Illes Balears",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2006,
           "end": 2006,
           "name": "Caisse d'Épargne-Illes Balears",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2007,
           "end": 2010,
           "name": "Caisse d'Épargne",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2011,
           "end": 2018,
           "name": "Movistar",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2019,
           "end": 2024,
           "name": "Movistar Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2025,
           "end": 2026,
           "name": "Movistar",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         }
       ]
     },
@@ -645,31 +742,36 @@
           "start": 2010,
           "end": 2018,
           "name": "Sky",
-          "cat": "world"
+          "cat": "world",
+          "country": "GB"
         },
         {
           "start": 2019,
           "end": 2019,
           "name": "Ineos",
-          "cat": "world"
+          "cat": "world",
+          "country": "GB"
         },
         {
           "start": 2020,
           "end": 2020,
           "name": "Team Ineos Grenadiers",
-          "cat": "world"
+          "cat": "world",
+          "country": "GB"
         },
         {
           "start": 2021,
           "end": 2025,
           "name": "Ineos Grenadiers",
-          "cat": "world"
+          "cat": "world",
+          "country": "GB"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Netcompany INEOS",
-          "cat": "world"
+          "cat": "world",
+          "country": "GB"
         }
       ]
     },
@@ -682,37 +784,43 @@
           "start": 2015,
           "end": 2016,
           "name": "Cycling Academy",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "IL"
         },
         {
           "start": 2017,
           "end": 2019,
           "name": "Israel Cycling Academy",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "IL"
         },
         {
           "start": 2020,
           "end": 2021,
           "name": "Israel Start-Up Nation",
-          "cat": "world"
+          "cat": "world",
+          "country": "IL"
         },
         {
           "start": 2022,
           "end": 2022,
           "name": "Israel-Premier Tech",
-          "cat": "world"
+          "cat": "world",
+          "country": "IL"
         },
         {
           "start": 2023,
           "end": 2025,
           "name": "Israel-Premier Tech",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "IL"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "NSN",
-          "cat": "world"
+          "cat": "world",
+          "country": "CH"
         }
       ]
     },
@@ -725,13 +833,15 @@
           "start": 2023,
           "end": 2025,
           "name": "Q36.5",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "CH"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Pinarello-Q36.5",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "CH"
         }
       ]
     },
@@ -744,31 +854,36 @@
           "start": 2010,
           "end": 2012,
           "name": "NetApp",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "DE"
         },
         {
           "start": 2013,
           "end": 2014,
           "name": "NetApp-Endura",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "DE"
         },
         {
           "start": 2015,
           "end": 2016,
           "name": "Bora-Argon 18",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "DE"
         },
         {
           "start": 2017,
           "end": 2023,
           "name": "Bora-Hansgrohe",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         },
         {
           "start": 2024,
           "end": 2026,
           "name": "Red Bull-Bora-Hansgrohe",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         }
       ]
     },
@@ -781,49 +896,57 @@
           "start": 2005,
           "end": 2007,
           "name": "Quick Step-Innergetic",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2008,
           "end": 2011,
           "name": "Quick Step",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2012,
           "end": 2014,
           "name": "Omega Pharma-Quick Step",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2015,
           "end": 2016,
           "name": "Etixx-Quick Step",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2017,
           "end": 2018,
           "name": "Quick-Step Floors",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2019,
           "end": 2021,
           "name": "Deceuninck-Quick Step",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2022,
           "end": 2022,
           "name": "Quick-Step Alpha Vinyl Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2023,
           "end": 2026,
           "name": "Soudal Quick-Step",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         }
       ]
     },
@@ -836,43 +959,50 @@
           "start": 2012,
           "end": 2015,
           "name": "Orica-GreenEDGE",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         },
         {
           "start": 2016,
           "end": 2016,
           "name": "Orica-BikeExchange",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         },
         {
           "start": 2017,
           "end": 2017,
           "name": "Orica-Scott",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         },
         {
           "start": 2018,
           "end": 2020,
           "name": "Mitchelton-Scott",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         },
         {
           "start": 2021,
           "end": 2021,
           "name": "Team BikeExchange",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         },
         {
           "start": 2022,
           "end": 2022,
           "name": "Team BikeExchange Jayco",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         },
         {
           "start": 2023,
           "end": 2026,
           "name": "Team Jayco AlUla",
-          "cat": "world"
+          "cat": "world",
+          "country": "AU"
         }
       ]
     },
@@ -885,67 +1015,78 @@
           "start": 2005,
           "end": 2005,
           "name": "Shimano-Memory Corp",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2006,
           "end": 2011,
           "name": "Skil-Shimano",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2012,
           "end": 2012,
           "name": "Argos-Shimano",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2013,
           "end": 2013,
           "name": "Argos-Shimano",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2014,
           "end": 2014,
           "name": "Giant-Shimano",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2015,
           "end": 2016,
           "name": "Giant-Alpecin",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         },
         {
           "start": 2017,
           "end": 2018,
           "name": "Sunweb",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         },
         {
           "start": 2019,
           "end": 2020,
           "name": "Team Sunweb",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         },
         {
           "start": 2021,
           "end": 2023,
           "name": "Team DSM",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2024,
           "end": 2024,
           "name": "Team dsm-firmenich PostNL",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2025,
           "end": 2026,
           "name": "Team Picnic PostNL",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         }
       ]
     },
@@ -958,37 +1099,43 @@
           "start": 2005,
           "end": 2012,
           "name": "Rabobank",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2013,
           "end": 2014,
           "name": "Belkin",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2015,
           "end": 2018,
           "name": "Lotto NL-Jumbo",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2019,
           "end": 2020,
           "name": "Team Jumbo-Visma",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2021,
           "end": 2023,
           "name": "Jumbo-Visma",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         },
         {
           "start": 2024,
           "end": 2026,
           "name": "Team Visma-Lease a Bike",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         }
       ]
     },
@@ -1001,55 +1148,64 @@
           "start": 2005,
           "end": 2008,
           "name": "Bouygues Telecom",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2009,
           "end": 2009,
           "name": "BBox Bouygues Telecom",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "BBox Bouygues Telecom",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2011,
           "end": 2013,
           "name": "Team Europcar",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2014,
           "end": 2014,
           "name": "Europcar",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2015,
           "end": 2015,
           "name": "Europcar",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2016,
           "end": 2018,
           "name": "Direct Énergie",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2019,
           "end": 2020,
           "name": "Total Direct Énergie",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         },
         {
           "start": 2021,
           "end": 2026,
           "name": "TotalEnergies",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "FR"
         }
       ]
     },
@@ -1062,7 +1218,8 @@
           "start": 2022,
           "end": 2026,
           "name": "Tudor",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "CH"
         }
       ]
     },
@@ -1075,67 +1232,78 @@
           "start": 2005,
           "end": 2005,
           "name": "Lampre-Caffita",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2006,
           "end": 2007,
           "name": "Lampre-Fondital",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "Lampre",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2009,
           "end": 2009,
           "name": "Lampre-NGC",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "Lampre-Farnese Vini",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2011,
           "end": 2012,
           "name": "Lampre-ISD",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2013,
           "end": 2016,
           "name": "Lampre-Merida",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2017,
           "end": 2017,
           "name": "UAE Abu Dhabi",
-          "cat": "world"
+          "cat": "world",
+          "country": "AE"
         },
         {
           "start": 2018,
           "end": 2018,
           "name": "UAE Emirates",
-          "cat": "world"
+          "cat": "world",
+          "country": "AE"
         },
         {
           "start": 2019,
           "end": 2024,
           "name": "UAE Team Emirates",
-          "cat": "world"
+          "cat": "world",
+          "country": "AE"
         },
         {
           "start": 2025,
           "end": 2026,
           "name": "UAE Emirates Team XRG",
-          "cat": "world"
+          "cat": "world",
+          "country": "AE"
         }
       ]
     },
@@ -1148,19 +1316,22 @@
           "start": 2020,
           "end": 2023,
           "name": "Uno-X",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NO"
         },
         {
           "start": 2024,
           "end": 2025,
           "name": "Uno-X Mobility",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NO"
         },
         {
           "start": 2026,
           "end": 2026,
           "name": "Uno-X Mobility",
-          "cat": "world"
+          "cat": "world",
+          "country": "NO"
         }
       ]
     },
@@ -1173,43 +1344,50 @@
           "start": 2005,
           "end": 2005,
           "name": "Liberty Seguros",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2006,
           "end": 2018,
           "name": "Astana",
-          "cat": "world"
+          "cat": "world",
+          "country": "KZ"
         },
         {
           "start": 2019,
           "end": 2020,
           "name": "Astana Pro Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "KZ"
         },
         {
           "start": 2021,
           "end": 2021,
           "name": "Astana-Premier Tech",
-          "cat": "world"
+          "cat": "world",
+          "country": "KZ"
         },
         {
           "start": 2022,
           "end": 2023,
           "name": "Astana Qazaqstan Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "KZ"
         },
         {
           "start": 2024,
           "end": 2024,
           "name": "Astana Qazaqstan",
-          "cat": "world"
+          "cat": "world",
+          "country": "KZ"
         },
         {
           "start": 2025,
           "end": 2026,
           "name": "XDS Astana Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "KZ"
         }
       ]
     },
@@ -1222,19 +1400,22 @@
           "start": 2009,
           "end": 2016,
           "name": "Katusha",
-          "cat": "world"
+          "cat": "world",
+          "country": "RU"
         },
         {
           "start": 2017,
           "end": 2018,
           "name": "Katusha-Alpecin",
-          "cat": "world"
+          "cat": "world",
+          "country": "CH"
         },
         {
           "start": 2019,
           "end": 2019,
           "name": "Team Katusha-Alpecin",
-          "cat": "world"
+          "cat": "world",
+          "country": "CH"
         },
         {
           "start": 2020,
@@ -1253,49 +1434,57 @@
           "start": 2008,
           "end": 2009,
           "name": "MTN",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "ZA"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "MTN Energade",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "ZA"
         },
         {
           "start": 2011,
           "end": 2012,
           "name": "MTN Qhubeka",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "ZA"
         },
         {
           "start": 2013,
           "end": 2015,
           "name": "MTN-Qhubeka",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "ZA"
         },
         {
           "start": 2016,
           "end": 2018,
           "name": "Dimension Data",
-          "cat": "world"
+          "cat": "world",
+          "country": "ZA"
         },
         {
           "start": 2019,
           "end": 2019,
           "name": "Team Dimension Data",
-          "cat": "world"
+          "cat": "world",
+          "country": "ZA"
         },
         {
           "start": 2020,
           "end": 2020,
           "name": "NTT Pro Cycling",
-          "cat": "world"
+          "cat": "world",
+          "country": "ZA"
         },
         {
           "start": 2021,
           "end": 2021,
           "name": "Team Qhubeka Assos/NextHash",
-          "cat": "world"
+          "cat": "world",
+          "country": "ZA"
         },
         {
           "start": 2022,
@@ -1314,13 +1503,15 @@
           "start": 2011,
           "end": 2018,
           "name": "BMC Racing",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2019,
           "end": 2020,
           "name": "CCC Team",
-          "cat": "world"
+          "cat": "world",
+          "country": "PL"
         },
         {
           "start": 2021,
@@ -1339,13 +1530,15 @@
           "start": 2012,
           "end": 2014,
           "name": "IAM",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "CH"
         },
         {
           "start": 2015,
           "end": 2016,
           "name": "IAM",
-          "cat": "world"
+          "cat": "world",
+          "country": "CH"
         },
         {
           "start": 2017,
@@ -1364,49 +1557,57 @@
           "start": 2005,
           "end": 2007,
           "name": "CSC",
-          "cat": "world"
+          "cat": "world",
+          "country": "DK"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "CSC Saxo Bank",
-          "cat": "world"
+          "cat": "world",
+          "country": "DK"
         },
         {
           "start": 2009,
           "end": 2010,
           "name": "Saxo Bank",
-          "cat": "world"
+          "cat": "world",
+          "country": "DK"
         },
         {
           "start": 2011,
           "end": 2011,
           "name": "Saxo Bank-Sungard",
-          "cat": "world"
+          "cat": "world",
+          "country": "DK"
         },
         {
           "start": 2012,
           "end": 2012,
           "name": "Saxo Bank-Tinkoff Bank",
-          "cat": "world"
+          "cat": "world",
+          "country": "DK"
         },
         {
           "start": 2013,
           "end": 2013,
           "name": "Saxo-Tinkoff",
-          "cat": "world"
+          "cat": "world",
+          "country": "DK"
         },
         {
           "start": 2014,
           "end": 2015,
           "name": "Tinkoff-Saxo",
-          "cat": "world"
+          "cat": "world",
+          "country": "RU"
         },
         {
           "start": 2016,
           "end": 2016,
           "name": "Tinkoff",
-          "cat": "world"
+          "cat": "world",
+          "country": "RU"
         },
         {
           "start": 2017,
@@ -1425,31 +1626,36 @@
           "start": 2005,
           "end": 2005,
           "name": "Liquigas-Bianchi",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2006,
           "end": 2009,
           "name": "Liquigas",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "Liquigas-Doimo",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2011,
           "end": 2012,
           "name": "Liquigas-Cannondale",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2013,
           "end": 2014,
           "name": "Cannondale",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2015,
@@ -1468,19 +1674,22 @@
           "start": 2005,
           "end": 2005,
           "name": "Fundacion Ciclista Euskadi",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2006,
           "end": 2012,
           "name": "Euskaltel-Euskadi",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2013,
           "end": 2013,
           "name": "Euskaltel Euskadi",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2014,
@@ -1499,37 +1708,43 @@
           "start": 2005,
           "end": 2005,
           "name": "Fondas Imabo-Doorisol",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2006,
           "end": 2006,
           "name": "Fondas-P3 Transfer",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2007,
           "end": 2007,
           "name": "P3 Transfer-Fondas",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "P3 Transfer-Batavus",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2009,
           "end": 2010,
           "name": "Vacansoleil",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "NL"
         },
         {
           "start": 2011,
           "end": 2013,
           "name": "Vacansoleil-DCM",
-          "cat": "world"
+          "cat": "world",
+          "country": "NL"
         }
       ]
     },
@@ -1542,7 +1757,8 @@
           "start": 2010,
           "end": 2011,
           "name": "RadioShack",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2012,
@@ -1561,31 +1777,36 @@
           "start": 2005,
           "end": 2007,
           "name": "T-Mobile",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "Columbia",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2009,
           "end": 2009,
           "name": "Columbia-HTC",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "HTC-Columbia",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2011,
           "end": 2011,
           "name": "HTC-Highroad",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2012,
@@ -1604,25 +1825,29 @@
           "start": 2005,
           "end": 2007,
           "name": "Saunier Duval-Prodir",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "Scott-American Beef",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2009,
           "end": 2009,
           "name": "Fuji-Servetto",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2010,
           "end": 2010,
           "name": "Footon-Servetto",
-          "cat": "world"
+          "cat": "world",
+          "country": "ES"
         },
         {
           "start": 2011,
@@ -1641,7 +1866,19 @@
           "start": 2006,
           "end": 2010,
           "name": "Milram",
-          "cat": "world"
+          "cat": "world",
+          "countryPeriods": [
+            {
+              "start": 2006,
+              "end": 2007,
+              "country": "IT"
+            },
+            {
+              "start": 2008,
+              "end": 2010,
+              "country": "DE"
+            }
+          ]
         },
         {
           "start": 2011,
@@ -1660,7 +1897,8 @@
           "start": 2005,
           "end": 2008,
           "name": "Gerolsteiner",
-          "cat": "world"
+          "cat": "world",
+          "country": "DE"
         },
         {
           "start": 2009,
@@ -1679,7 +1917,8 @@
           "start": 2005,
           "end": 2007,
           "name": "Discovery Channel",
-          "cat": "world"
+          "cat": "world",
+          "country": "US"
         },
         {
           "start": 2008,
@@ -1698,7 +1937,8 @@
           "start": 2005,
           "end": 2008,
           "name": "Crédit agricole",
-          "cat": "world"
+          "cat": "world",
+          "country": "FR"
         },
         {
           "start": 2009,
@@ -1717,7 +1957,8 @@
           "start": 2005,
           "end": 2005,
           "name": "Domina Vacanze",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2006,
@@ -1736,7 +1977,8 @@
           "start": 2005,
           "end": 2005,
           "name": "Fassa Bortolo",
-          "cat": "world"
+          "cat": "world",
+          "country": "IT"
         },
         {
           "start": 2006,
@@ -1755,7 +1997,8 @@
           "start": 2005,
           "end": 2006,
           "name": "Phonak",
-          "cat": "world"
+          "cat": "world",
+          "country": "CH"
         },
         {
           "start": 2007,
@@ -1774,25 +2017,29 @@
           "start": 2005,
           "end": 2005,
           "name": "Mr Bookmaker-Sports Tech",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2006,
           "end": 2006,
           "name": "Unibet.com",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         },
         {
           "start": 2007,
           "end": 2007,
           "name": "Unibet.com",
-          "cat": "world"
+          "cat": "world",
+          "country": "BE"
         },
         {
           "start": 2008,
           "end": 2008,
           "name": "Cycle Collstrop",
-          "cat": "pro"
+          "cat": "pro",
+          "country": "BE"
         }
       ]
     }
