@@ -26,7 +26,7 @@
       <span class="brand-mark" aria-hidden="true">PT</span>
       <div class="brand-text">
         <h1>Peloton<span class="accent">Timeline</span></h1>
-        <p>Généalogie des équipes cyclistes · 2005–2026</p>
+        <p>Généalogie des équipes cyclistes · <span id="yearRange">2000–2026</span></p>
       </div>
     </div>
     <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
@@ -77,7 +77,7 @@
     </table>
   </details>
 
-  <section class="axis-caption" aria-hidden="true"><span>2005</span><span>2026</span></section>
+  <section class="axis-caption" aria-hidden="true"><span id="axisMin">2000</span><span id="axisMax">2026</span></section>
 
   <section class="team-list" id="teamList"></section>
 
@@ -92,7 +92,7 @@
 </div>
 
 <footer class="page-footer">
-  <p>44 lignées suivies depuis 2005 · 🔵 World Team · 🔴 Pro Team</p>
+  <p>44 lignées suivies depuis <span id="footerMinYear">2000</span> · 🔵 World Team · 🔴 Pro Team</p>
   <p class="source-note">Source : Wikipedia</p>
 </footer>
 

@@ -1,5 +1,10 @@
 {
   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
     2005,
     2006,
     2007,
@@ -131,9 +136,16 @@
     },
     {
       "id": 4,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2004,
+          "name": "Cofidis-Le Crédit par Téléphone",
+          "cat": "world",
+          "country": "FR"
+        },
         {
           "start": 2005,
           "end": 2008,

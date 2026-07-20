@@ -5,6 +5,11 @@
   const maxYear = Math.max(...years);
   const minYear = Math.min(...years);
 
+  document.getElementById('yearRange').textContent = `${minYear}–${maxYear}`;
+  document.getElementById('axisMin').textContent = minYear;
+  document.getElementById('axisMax').textContent = maxYear;
+  document.getElementById('footerMinYear').textContent = minYear;
+
   // L'UCI a renommé ses divisions au fil du temps, et le même nom a parfois
   // désigné des niveaux différents : "UCI ProTeam" était la 1ère division
   // jusqu'en 2014, puis désigne la 2e division depuis 2020. On garde donc
