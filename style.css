@@ -346,6 +346,8 @@ main {
   text-overflow: ellipsis;
 }
 
+.card-flag { margin-right: 6px; }
+
 .card-meta {
   font-size: 11.5px;
   color: var(--text-faint);
@@ -377,7 +379,6 @@ main {
   border-radius: 7px;
   overflow: hidden;
   background: var(--bg-2);
-  position: relative;
   border: 1px solid var(--border);
 }
 
@@ -416,16 +417,6 @@ main {
   color: var(--gone-text);
   font-style: italic;
   font-weight: 500;
-}
-
-.bar-now {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--text);
-  pointer-events: none;
 }
 
 .empty-state {

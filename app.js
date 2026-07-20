@@ -18,9 +18,20 @@
 
   const FLAG_CDN = 'https://cdn.jsdelivr.net/npm/circle-flags@2/flags/';
 
-  function flagImg(code, title) {
+  function flagImg(code, title, extraClass) {
     const src = `${FLAG_CDN}${code.toLowerCase()}.svg`;
-    return `<img class="ti-flag" src="${src}" width="15" height="15" alt="${escapeHtml(title)}" title="${escapeHtml(title)}" loading="lazy" />`;
+    const cls = extraClass ? `ti-flag ${extraClass}` : 'ti-flag';
+    return `<img class="${cls}" src="${src}" width="15" height="15" alt="${escapeHtml(title)}" title="${escapeHtml(title)}" loading="lazy" />`;
+  }
+
+  function flagTitle(code) {
+    return `Licence UCI : ${COUNTRY_NAME[code] || code}`;
+  }
+
+  // Pays de la licence la plus récente d'un segment (dernière période si elle a changé en cours de route).
+  function latestCountryCode(seg) {
+    if (seg.countryPeriods) return seg.countryPeriods[seg.countryPeriods.length - 1].country;
+    return seg.country || null;
   }
 
   function normalize(str) {
@@ -144,13 +155,16 @@
           ? `${l.lastSeg.name} · ${l.lastSeg.start}`
           : `Dernière saison : ${l.lastYear}`;
 
+        const countryCode = latestCountryCode(l.lastReal);
+        const cardFlag = countryCode ? flagImg(countryCode, flagTitle(countryCode), 'card-flag') : '';
+
         return `
         <article class="card" data-id="${l.id}">
           <div class="card-head">
             <div class="card-head-left">
               <span class="dot ${dotClass}"></span>
               <div class="card-title">
-                <div class="card-name">${escapeHtml(l.displayName)}</div>
+                <div class="card-name">${cardFlag}${escapeHtml(l.displayName)}</div>
                 <div class="card-meta">${escapeHtml(meta)}</div>
               </div>
             </div>
@@ -158,7 +172,6 @@
           </div>
           <div class="bar">
             ${renderBar(l)}
-            ${l.lastYear === maxYear ? '<div class="bar-now"></div>' : ''}
           </div>
         </article>`;
       })
@@ -188,10 +201,6 @@
     const subtitle = l.activeNow
       ? `Active en ${maxYear} · ${CAT_LABEL[l.status]} · ${l.seasons} saisons depuis ${l.firstYear}`
       : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
-
-    function flagTitle(code) {
-      return `Licence UCI : ${COUNTRY_NAME[code] || code}`;
-    }
 
     function renderFlags(seg) {
       if (seg.countryPeriods) {
