@@ -110,11 +110,6 @@
     return String(str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
-  // Segments shorter than this (in years) can't fit a legible label on a
-  // phone-width bar — leave them blank rather than show 1-2 clipped letters.
-  // Tapping the segment still opens the full history, focused on that entry.
-  const MIN_YEARS_FOR_LABEL = 3;
-
   function renderBar(l) {
     const leadSpace = l.firstYear - minYear;
     const trailSpace = maxYear - l.lastYear;
@@ -122,8 +117,8 @@
     if (leadSpace > 0) html += `<div class="bar-spacer" style="flex-grow:${leadSpace}"></div>`;
     l.segs.forEach((seg, idx) => {
       const duration = seg.end - seg.start + 1;
-      const label = duration >= MIN_YEARS_FOR_LABEL ? escapeHtml(seg.name) : '';
-      html += `<div class="bar-seg seg-${seg.cat}" style="flex-grow:${duration}" data-idx="${idx}" title="${escapeHtml(seg.name)} (${seg.start}–${seg.end})">${label}</div>`;
+      const name = escapeHtml(seg.name);
+      html += `<div class="bar-seg seg-${seg.cat}" style="flex-grow:${duration}" data-idx="${idx}" title="${name} (${seg.start}–${seg.end})"><span class="bar-seg-label">${name}</span></div>`;
     });
     if (trailSpace > 0) html += `<div class="bar-spacer" style="flex-grow:${trailSpace}"></div>`;
     return html;

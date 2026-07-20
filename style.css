@@ -392,10 +392,14 @@ main {
   padding: 0 7px;
   font-size: 10.5px;
   font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   border-right: 1px solid color-mix(in srgb, var(--panel) 40%, transparent);
+}
+
+.bar-seg-label {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .bar-seg:last-child { border-right: none; }
 
