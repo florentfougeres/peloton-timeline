@@ -8,21 +8,20 @@
   --text-dim: #9aa3b5;
   --text-faint: #5c6478;
 
-  /* Bleu et rouge officiels UCI (logo / maillot arc-en-ciel) */
-  --world: #409ad6;
-  --world-deep: #0078c8;
+  /* Bleu et rouge UCI (logo / maillot arc-en-ciel), désaturés */
+  --world: #4192c8;
+  --world-deep: #2b5f82;
   --world-text: #ffffff;
 
-  --pro: #d64f6d;
-  --pro-deep: #c8143c;
+  --pro: #bc4e66;
+  --pro-deep: #7a3343;
   --pro-text: #ffffff;
 
   --gone-1: #5b3140;
   --gone-2: #40202c;
   --gone-text: #e8c7d2;
 
-  --shadow: 0 10px 30px -12px rgba(0,0,0,.6);
-  --shadow-sm: 0 4px 14px -6px rgba(0,0,0,.5);
+  --shadow: 0 6px 16px -8px rgba(0,0,0,.4);
 }
 
 :root[data-theme="light"] {
@@ -35,21 +34,20 @@
   --text-dim: #5d6270;
   --text-faint: #90939f;
 
-  /* Bleu et rouge officiels UCI (logo / maillot arc-en-ciel) */
-  --world: #0078c8;
-  --world-deep: #00548c;
+  /* Bleu et rouge UCI (logo / maillot arc-en-ciel), désaturés */
+  --world: #2c6c96;
+  --world-deep: #214963;
   --world-text: #ffffff;
 
-  --pro: #c8143c;
-  --pro-deep: #8c0e2a;
+  --pro: #94384c;
+  --pro-deep: #652a37;
   --pro-text: #ffffff;
 
   --gone-1: #ecd3d9;
   --gone-2: #f6e6ea;
   --gone-text: #833e4c;
 
-  --shadow: 0 10px 30px -14px rgba(20,20,30,.16);
-  --shadow-sm: 0 4px 14px -8px rgba(20,20,30,.14);
+  --shadow: 0 6px 18px -10px rgba(20,20,30,.22);
 }
 
 * { box-sizing: border-box; }
@@ -78,9 +76,7 @@ button, select, input { font-family: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -102,8 +98,19 @@ button, select, input { font-family: inherit; }
 }
 
 .brand-mark {
-  font-size: 28px;
   flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--world-deep);
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .brand-text h1 {
@@ -258,8 +265,8 @@ main {
   border-radius: 3px;
   display: inline-block;
 }
-.swatch-world { background: linear-gradient(135deg, var(--world), var(--world-deep)); }
-.swatch-pro { background: linear-gradient(135deg, var(--pro), var(--pro-deep)); }
+.swatch-world { background: var(--world-deep); }
+.swatch-pro { background: var(--pro-deep); }
 .swatch-gone { background: repeating-linear-gradient(135deg, var(--gone-1), var(--gone-1) 3px, var(--gone-2) 3px, var(--gone-2) 6px); }
 
 .hint {
@@ -294,7 +301,6 @@ main {
   border-radius: 14px;
   padding: 13px 14px 14px;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
   transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 .card:hover {
@@ -325,8 +331,8 @@ main {
   border-radius: 50%;
   flex: none;
 }
-.dot-world { background: var(--world); box-shadow: 0 0 8px color-mix(in srgb, var(--world) 60%, transparent); }
-.dot-pro { background: var(--pro); box-shadow: 0 0 8px color-mix(in srgb, var(--pro) 60%, transparent); }
+.dot-world { background: var(--world-deep); }
+.dot-pro { background: var(--pro-deep); }
 .dot-gone { background: var(--text-faint); }
 
 .card-title { min-width: 0; }
@@ -394,11 +400,11 @@ main {
 .bar-seg:last-child { border-right: none; }
 
 .bar-seg.seg-world {
-  background: linear-gradient(135deg, var(--world), var(--world-deep));
+  background: var(--world-deep);
   color: var(--world-text);
 }
 .bar-seg.seg-pro {
-  background: linear-gradient(135deg, var(--pro), var(--pro-deep));
+  background: var(--pro-deep);
   color: var(--pro-text);
 }
 .bar-seg.seg-special {
@@ -415,7 +421,6 @@ main {
   bottom: 0;
   width: 2px;
   background: var(--text);
-  box-shadow: 0 0 6px color-mix(in srgb, var(--text) 70%, transparent);
   pointer-events: none;
 }
 
@@ -431,9 +436,7 @@ main {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: color-mix(in srgb, var(--bg) 70%, black 20%);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: color-mix(in srgb, var(--bg) 25%, black 70%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -455,7 +458,7 @@ main {
   overflow-y: auto;
   padding: 26px 22px calc(26px + env(safe-area-inset-bottom));
   position: relative;
-  box-shadow: 0 -20px 60px -20px rgba(0,0,0,.4);
+  box-shadow: 0 -8px 24px -12px rgba(0,0,0,.35);
   transform: translateY(16px);
   transition: transform .2s ease;
 }
@@ -527,8 +530,8 @@ main {
   border-radius: 50%;
   border: 2px solid var(--panel);
 }
-.timeline-item.cat-world::before { background: var(--world); }
-.timeline-item.cat-pro::before { background: var(--pro); }
+.timeline-item.cat-world::before { background: var(--world-deep); }
+.timeline-item.cat-pro::before { background: var(--pro-deep); }
 .timeline-item.cat-special::before { background: var(--text-faint); }
 
 .timeline-item .ti-years {
