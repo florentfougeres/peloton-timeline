@@ -542,6 +542,12 @@ main {
   margin-top: 2px;
 }
 
+.ti-flag {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 13px;
+}
+
 .timeline-item .ti-badge {
   display: inline-block;
   margin-top: 5px;

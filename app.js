@@ -1,9 +1,25 @@
-(function () {
+(async function () {
+  const DATA = await (await fetch('data.json')).json();
+
   const years = DATA.years;
   const maxYear = Math.max(...years);
   const minYear = Math.min(...years);
 
   const CAT_LABEL = { world: 'World Team', pro: 'Pro Team' };
+
+  // Noms français des pays de licence UCI présents dans data.json, pour l'info-bulle du drapeau.
+  const COUNTRY_NAME = {
+    AE: 'Émirats arabes unis', AU: 'Australie', BE: 'Belgique', BH: 'Bahreïn',
+    CH: 'Suisse', DE: 'Allemagne', DK: 'Danemark', ES: 'Espagne', FR: 'France',
+    GB: 'Royaume-Uni', IL: 'Israël', IT: 'Italie', KZ: 'Kazakhstan', LU: 'Luxembourg',
+    NL: 'Pays-Bas', NO: 'Norvège', PL: 'Pologne', RU: 'Russie', US: 'États-Unis',
+  };
+
+  function flagEmoji(code) {
+    if (!code || code.length !== 2) return '';
+    const points = [...code.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65);
+    return String.fromCodePoint(...points);
+  }
 
   function normalize(str) {
     return str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -180,10 +196,13 @@
       .map((seg, idx) => {
         const yrs = seg.start === seg.end ? `${seg.start}` : `${seg.start}–${seg.end}`;
         const badge = seg.cat === 'special' ? '' : `<span class="ti-badge cat-${seg.cat}">${CAT_LABEL[seg.cat]}</span>`;
+        const flag = seg.country
+          ? `<span class="ti-flag" title="Licence UCI : ${escapeHtml(COUNTRY_NAME[seg.country] || seg.country)}">${flagEmoji(seg.country)}</span>`
+          : '';
         return `
         <div class="timeline-item cat-${seg.cat}" data-idx="${idx}">
           <div class="ti-years">${yrs}</div>
-          <div class="ti-name">${escapeHtml(seg.name)}</div>
+          <div class="ti-name">${flag}${escapeHtml(seg.name)}</div>
           ${badge}
         </div>`;
       })

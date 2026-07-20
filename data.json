@@ -1,5 +1,4 @@
-// Généré automatiquement depuis equipe-pro-tour.xlsx
-const DATA = {
+{
   "years": [
     2005,
     2006,
@@ -1798,4 +1797,4 @@ const DATA = {
       ]
     }
   ]
-};
+}
