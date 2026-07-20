@@ -1,0 +1,276 @@
+(function () {
+  const years = DATA.years;
+  const maxYear = Math.max(...years);
+  const minYear = Math.min(...years);
+
+  const CAT_LABEL = { world: 'World Team', pro: 'Pro Team' };
+
+  function normalize(str) {
+    return str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  }
+
+  // ---------- Theme ----------
+
+  const themeToggle = document.getElementById('themeToggle');
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('peloton-theme', next);
+  });
+
+  // ---------- Enrich lineages ----------
+
+  const lineages = DATA.lineages.map((lineage) => {
+    const segs = lineage.segments;
+    const last = segs[segs.length - 1];
+    const isSpecialEnd = last.cat === 'special';
+    const realSegs = segs.filter((s) => s.cat !== 'special');
+    const lastReal = realSegs[realSegs.length - 1] || last;
+    const activeNow = lineage.lastYear === maxYear && !isSpecialEnd;
+    const status = activeNow ? last.cat : 'gone';
+    const seasons = lineage.lastYear - lineage.firstYear + 1;
+    const searchBlob = normalize(segs.map((s) => s.name).join(' | '));
+
+    return {
+      ...lineage,
+      segs,
+      lastSeg: last,
+      lastReal,
+      isSpecialEnd,
+      activeNow,
+      status, // 'world' | 'pro' | 'gone'
+      seasons,
+      searchBlob,
+      displayName: lastReal.name,
+    };
+  });
+
+  // ---------- Filtering / sorting state ----------
+
+  const state = {
+    search: '',
+    statusSet: new Set(['world', 'pro', 'gone']),
+    sort: 'status',
+  };
+
+  function applyFilters() {
+    let list = lineages.filter((l) => state.statusSet.has(l.status));
+    if (state.search) {
+      list = list.filter((l) => l.searchBlob.includes(state.search));
+    }
+    return list;
+  }
+
+  function sortList(list) {
+    const byName = (a, b) => a.displayName.localeCompare(b.displayName, 'fr');
+    const arr = [...list];
+    switch (state.sort) {
+      case 'alpha':
+        arr.sort(byName);
+        break;
+      case 'oldest':
+        arr.sort((a, b) => a.firstYear - b.firstYear || byName(a, b));
+        break;
+      case 'longevity':
+        arr.sort((a, b) => b.seasons - a.seasons || byName(a, b));
+        break;
+      case 'status':
+      default: {
+        const rank = { world: 0, pro: 1, gone: 2 };
+        arr.sort((a, b) => rank[a.status] - rank[b.status] || byName(a, b));
+      }
+    }
+    return arr;
+  }
+
+  // ---------- Rendering ----------
+
+  const teamList = document.getElementById('teamList');
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  // Segments shorter than this (in years) can't fit a legible label on a
+  // phone-width bar — leave them blank rather than show 1-2 clipped letters.
+  // Tapping the segment still opens the full history, focused on that entry.
+  const MIN_YEARS_FOR_LABEL = 3;
+
+  function renderBar(l) {
+    const leadSpace = l.firstYear - minYear;
+    const trailSpace = maxYear - l.lastYear;
+    let html = '';
+    if (leadSpace > 0) html += `<div class="bar-spacer" style="flex-grow:${leadSpace}"></div>`;
+    l.segs.forEach((seg, idx) => {
+      const duration = seg.end - seg.start + 1;
+      const label = duration >= MIN_YEARS_FOR_LABEL ? escapeHtml(seg.name) : '';
+      html += `<div class="bar-seg seg-${seg.cat}" style="flex-grow:${duration}" data-idx="${idx}" title="${escapeHtml(seg.name)} (${seg.start}–${seg.end})">${label}</div>`;
+    });
+    if (trailSpace > 0) html += `<div class="bar-spacer" style="flex-grow:${trailSpace}"></div>`;
+    return html;
+  }
+
+  function render() {
+    const filtered = applyFilters();
+    const list = sortList(filtered);
+
+    document.getElementById('emptyState').hidden = list.length !== 0;
+    teamList.hidden = list.length === 0;
+
+    updatePillCounts();
+
+    teamList.innerHTML = list
+      .map((l) => {
+        const dotClass = l.status === 'world' ? 'dot-world' : l.status === 'pro' ? 'dot-pro' : 'dot-gone';
+        const badgeClass = l.status === 'world' ? 'badge-world' : l.status === 'pro' ? 'badge-pro' : 'badge-gone';
+        const badgeLabel = l.status === 'world' ? 'World Team' : l.status === 'pro' ? 'Pro Team' : 'Disparue';
+        const meta = l.activeNow
+          ? `Depuis ${l.firstYear} · ${l.seasons} saisons`
+          : l.isSpecialEnd
+          ? `${l.lastSeg.name} · ${l.lastSeg.start}`
+          : `Dernière saison : ${l.lastYear}`;
+
+        return `
+        <article class="card" data-id="${l.id}">
+          <div class="card-head">
+            <div class="card-head-left">
+              <span class="dot ${dotClass}"></span>
+              <div class="card-title">
+                <div class="card-name">${escapeHtml(l.displayName)}</div>
+                <div class="card-meta">${escapeHtml(meta)}</div>
+              </div>
+            </div>
+            <span class="card-badge ${badgeClass}">${badgeLabel}</span>
+          </div>
+          <div class="bar">
+            ${renderBar(l)}
+            ${l.lastYear === maxYear ? '<div class="bar-now"></div>' : ''}
+          </div>
+        </article>`;
+      })
+      .join('');
+
+    teamList.querySelectorAll('.card').forEach((card) => {
+      const l = lineages.find((x) => x.id === Number(card.dataset.id));
+      if (!l) return;
+
+      card.addEventListener('click', () => openModal(l));
+
+      card.querySelectorAll('.bar-seg').forEach((segEl) => {
+        segEl.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openModal(l, Number(segEl.dataset.idx));
+        });
+      });
+    });
+  }
+
+  // ---------- Modal ----------
+
+  const modalBackdrop = document.getElementById('modalBackdrop');
+  const modalContent = document.getElementById('modalContent');
+
+  function openModal(l, focusIdx) {
+    const subtitle = l.activeNow
+      ? `Active en ${maxYear} · ${CAT_LABEL[l.status]} · ${l.seasons} saisons depuis ${l.firstYear}`
+      : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
+
+    const items = l.segs
+      .map((seg, idx) => {
+        const yrs = seg.start === seg.end ? `${seg.start}` : `${seg.start}–${seg.end}`;
+        const badge = seg.cat === 'special' ? '' : `<span class="ti-badge cat-${seg.cat}">${CAT_LABEL[seg.cat]}</span>`;
+        return `
+        <div class="timeline-item cat-${seg.cat}" data-idx="${idx}">
+          <div class="ti-years">${yrs}</div>
+          <div class="ti-name">${escapeHtml(seg.name)}</div>
+          ${badge}
+        </div>`;
+      })
+      .join('');
+
+    modalContent.innerHTML = `
+      <h2>${escapeHtml(l.displayName)}</h2>
+      <p class="modal-sub">${subtitle}</p>
+      <div class="timeline-list">${items}</div>
+    `;
+    modalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    if (focusIdx != null) {
+      const target = modalContent.querySelector(`.timeline-item[data-idx="${focusIdx}"]`);
+      if (target) {
+        target.classList.add('is-focused');
+        requestAnimationFrame(() => target.scrollIntoView({ block: 'center' }));
+      }
+    }
+  }
+
+  function closeModal() {
+    modalBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ---------- Controls ----------
+
+  const searchInput = document.getElementById('search');
+  const clearBtn = document.getElementById('clearSearch');
+
+  searchInput.addEventListener('input', () => {
+    state.search = normalize(searchInput.value.trim());
+    clearBtn.hidden = searchInput.value.length === 0;
+    render();
+  });
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    state.search = '';
+    clearBtn.hidden = true;
+    render();
+    searchInput.focus();
+  });
+
+  document.getElementById('sortSelect').addEventListener('change', (e) => {
+    state.sort = e.target.value;
+    render();
+  });
+
+  const pills = document.querySelectorAll('.pill');
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const f = pill.dataset.filter;
+      state.statusSet = f === 'all' ? new Set(['world', 'pro', 'gone']) : new Set([f]);
+      syncPillUI();
+      render();
+    });
+  });
+
+  function syncPillUI() {
+    const presets = { all: ['world', 'pro', 'gone'], world: ['world'], pro: ['pro'], gone: ['gone'] };
+    pills.forEach((pill) => {
+      const preset = presets[pill.dataset.filter];
+      const match = preset.length === state.statusSet.size && preset.every((c) => state.statusSet.has(c));
+      pill.classList.toggle('is-active', match);
+    });
+  }
+
+  function updatePillCounts() {
+    const counts = { world: 0, pro: 0, gone: 0 };
+    lineages.forEach((l) => counts[l.status]++);
+    document.getElementById('count-all').textContent = lineages.length;
+    document.getElementById('count-world').textContent = counts.world;
+    document.getElementById('count-pro').textContent = counts.pro;
+    document.getElementById('count-gone').textContent = counts.gone;
+  }
+
+  // ---------- Init ----------
+
+  render();
+})();

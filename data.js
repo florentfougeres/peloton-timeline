@@ -1,0 +1,1801 @@
+// Généré automatiquement depuis equipe-pro-tour.xlsx
+const DATA = {
+  "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "lineages": [
+    {
+      "id": 1,
+      "firstYear": 2009,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2009,
+          "end": 2015,
+          "name": "BKCP-Powerplus",
+          "cat": "pro"
+        },
+        {
+          "start": 2016,
+          "end": 2016,
+          "name": "BKCP-Corendon",
+          "cat": "pro"
+        },
+        {
+          "start": 2017,
+          "end": 2017,
+          "name": "Beobank-Corendon",
+          "cat": "pro"
+        },
+        {
+          "start": 2018,
+          "end": 2019,
+          "name": "Corendon-Circus",
+          "cat": "pro"
+        },
+        {
+          "start": 2020,
+          "end": 2022,
+          "name": "Alpecin-Fenix",
+          "cat": "pro"
+        },
+        {
+          "start": 2023,
+          "end": 2025,
+          "name": "Alpecin-Deceuninck",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Alpecin-Premier Tech",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstYear": 2017,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2017,
+          "end": 2019,
+          "name": "Bahrain-Merida",
+          "cat": "world"
+        },
+        {
+          "start": 2020,
+          "end": 2020,
+          "name": "Bahrain-McLaren",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2026,
+          "name": "Bahrain Victorious",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstYear": 2010,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2010,
+          "end": 2012,
+          "name": "Caja Rural",
+          "cat": "pro"
+        },
+        {
+          "start": 2013,
+          "end": 2026,
+          "name": "Caja Rural-Seguros RGA",
+          "cat": "pro"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2009,
+          "name": "Cofidis",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2019,
+          "name": "Cofidis",
+          "cat": "pro"
+        },
+        {
+          "start": 2020,
+          "end": 2025,
+          "name": "Cofidis",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Cofidis",
+          "cat": "pro"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "AG2R Prévoyance",
+          "cat": "pro"
+        },
+        {
+          "start": 2006,
+          "end": 2007,
+          "name": "AG2R Prévoyance",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2020,
+          "name": "AG2R La Mondiale",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2023,
+          "name": "AG2R Citroën Team",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2025,
+          "name": "Decathlon AG2R La Mondiale",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Decathlon CMA CGM",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2006,
+          "name": "Bretagne-Jean Floc'h",
+          "cat": "pro"
+        },
+        {
+          "start": 2007,
+          "end": 2008,
+          "name": "Bretagne-Armor Lux",
+          "cat": "pro"
+        },
+        {
+          "start": 2009,
+          "end": 2012,
+          "name": "Bretagne-Schuller",
+          "cat": "pro"
+        },
+        {
+          "start": 2013,
+          "end": 2015,
+          "name": "Bretagne-Séché Environnement",
+          "cat": "pro"
+        },
+        {
+          "start": 2016,
+          "end": 2016,
+          "name": "Fortuneo-Vital Concept",
+          "cat": "pro"
+        },
+        {
+          "start": 2017,
+          "end": 2017,
+          "name": "Fortuneo-Oscaro",
+          "cat": "pro"
+        },
+        {
+          "start": 2018,
+          "end": 2018,
+          "name": "Fortuneo-Samsic",
+          "cat": "pro"
+        },
+        {
+          "start": 2019,
+          "end": 2022,
+          "name": "Arkéa-Samsic",
+          "cat": "pro"
+        },
+        {
+          "start": 2023,
+          "end": 2023,
+          "name": "Team Arkéa-Samsic",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2025,
+          "name": "Arkéa-B&B Hotels",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2006,
+          "name": "TIAA-CREF",
+          "cat": "pro"
+        },
+        {
+          "start": 2007,
+          "end": 2007,
+          "name": "Slipstream",
+          "cat": "pro"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Slipstream-Chipotle",
+          "cat": "pro"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "Garmin-Slipstream",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "Garmin-Transitions",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "Garmin-Cervélo",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2014,
+          "name": "Garmin-Sharp",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2015,
+          "name": "Cannondale-Garmin",
+          "cat": "world"
+        },
+        {
+          "start": 2016,
+          "end": 2017,
+          "name": "Cannondale-Drapac",
+          "cat": "world"
+        },
+        {
+          "start": 2018,
+          "end": 2018,
+          "name": "EF Education First-Drapac",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2019,
+          "name": "EF Education First",
+          "cat": "world"
+        },
+        {
+          "start": 2020,
+          "end": 2020,
+          "name": "EF Pro Cycling",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2021,
+          "name": "EF Education-Nippo",
+          "cat": "world"
+        },
+        {
+          "start": 2022,
+          "end": 2026,
+          "name": "EF Education-EasyPost",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "firstYear": 2008,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Willems Veranda's",
+          "cat": "pro"
+        },
+        {
+          "start": 2009,
+          "end": 2010,
+          "name": "Veranda's Willems",
+          "cat": "pro"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "Veranda's Willems-Accent",
+          "cat": "pro"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "Accent Jobs-Willems Veranda's",
+          "cat": "pro"
+        },
+        {
+          "start": 2013,
+          "end": 2013,
+          "name": "Accent Jobs-Wanty",
+          "cat": "pro"
+        },
+        {
+          "start": 2014,
+          "end": 2018,
+          "name": "Wanty-Groupe Gobert",
+          "cat": "pro"
+        },
+        {
+          "start": 2019,
+          "end": 2019,
+          "name": "Wanty-Gobert",
+          "cat": "pro"
+        },
+        {
+          "start": 2020,
+          "end": 2020,
+          "name": "Circus-Wanty Gobert",
+          "cat": "pro"
+        },
+        {
+          "start": 2021,
+          "end": 2022,
+          "name": "Intermarché-Wanty-Gobert Matériaux",
+          "cat": "world"
+        },
+        {
+          "start": 2023,
+          "end": 2023,
+          "name": "Intermarché-Circus-Wanty",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2025,
+          "name": "Intermarché-Wanty",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Fusion avec Lotto",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2009,
+          "name": "La Française des jeux",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "FDJ",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "FDJ",
+          "cat": "pro"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "FDJ-BigMat",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2014,
+          "name": "FDJ.fr",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2017,
+          "name": "FDJ",
+          "cat": "world"
+        },
+        {
+          "start": 2018,
+          "end": 2025,
+          "name": "Groupama-FDJ",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Groupama-FDJ United",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "firstYear": 2011,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "Leopard-Trek",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "RadioShack-Nissan",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2013,
+          "name": "RadioShack-Leopard",
+          "cat": "world"
+        },
+        {
+          "start": 2014,
+          "end": 2015,
+          "name": "Trek Factory Racing",
+          "cat": "world"
+        },
+        {
+          "start": 2016,
+          "end": 2022,
+          "name": "Trek-Segafredo",
+          "cat": "world"
+        },
+        {
+          "start": 2023,
+          "end": 2026,
+          "name": "Lidl-Trek",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2006,
+          "name": "Davitamon-Lotto",
+          "cat": "world"
+        },
+        {
+          "start": 2007,
+          "end": 2007,
+          "name": "Predictor-Lotto",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2009,
+          "name": "Silence-Lotto",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2011,
+          "name": "Omega Pharma-Lotto",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2014,
+          "name": "Lotto-Belisol",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2022,
+          "name": "Lotto-Soudal",
+          "cat": "world"
+        },
+        {
+          "start": 2023,
+          "end": 2024,
+          "name": "Lotto Dstny",
+          "cat": "pro"
+        },
+        {
+          "start": 2025,
+          "end": 2025,
+          "name": "Lotto",
+          "cat": "pro"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Lotto - Intermarché",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Illes Balears",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2006,
+          "name": "Caisse d'Épargne-Illes Balears",
+          "cat": "world"
+        },
+        {
+          "start": 2007,
+          "end": 2010,
+          "name": "Caisse d'Épargne",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2018,
+          "name": "Movistar",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2024,
+          "name": "Movistar Team",
+          "cat": "world"
+        },
+        {
+          "start": 2025,
+          "end": 2026,
+          "name": "Movistar",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "firstYear": 2010,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2010,
+          "end": 2018,
+          "name": "Sky",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2019,
+          "name": "Ineos",
+          "cat": "world"
+        },
+        {
+          "start": 2020,
+          "end": 2020,
+          "name": "Team Ineos Grenadiers",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2025,
+          "name": "Ineos Grenadiers",
+          "cat": "world"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Netcompany INEOS",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "firstYear": 2015,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2015,
+          "end": 2016,
+          "name": "Cycling Academy",
+          "cat": "pro"
+        },
+        {
+          "start": 2017,
+          "end": 2019,
+          "name": "Israel Cycling Academy",
+          "cat": "pro"
+        },
+        {
+          "start": 2020,
+          "end": 2021,
+          "name": "Israel Start-Up Nation",
+          "cat": "world"
+        },
+        {
+          "start": 2022,
+          "end": 2022,
+          "name": "Israel-Premier Tech",
+          "cat": "world"
+        },
+        {
+          "start": 2023,
+          "end": 2025,
+          "name": "Israel-Premier Tech",
+          "cat": "pro"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "NSN",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "firstYear": 2023,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2023,
+          "end": 2025,
+          "name": "Q36.5",
+          "cat": "pro"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Pinarello-Q36.5",
+          "cat": "pro"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "firstYear": 2010,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2010,
+          "end": 2012,
+          "name": "NetApp",
+          "cat": "pro"
+        },
+        {
+          "start": 2013,
+          "end": 2014,
+          "name": "NetApp-Endura",
+          "cat": "pro"
+        },
+        {
+          "start": 2015,
+          "end": 2016,
+          "name": "Bora-Argon 18",
+          "cat": "pro"
+        },
+        {
+          "start": 2017,
+          "end": 2023,
+          "name": "Bora-Hansgrohe",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2026,
+          "name": "Red Bull-Bora-Hansgrohe",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2007,
+          "name": "Quick Step-Innergetic",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2011,
+          "name": "Quick Step",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2014,
+          "name": "Omega Pharma-Quick Step",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2016,
+          "name": "Etixx-Quick Step",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2018,
+          "name": "Quick-Step Floors",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2021,
+          "name": "Deceuninck-Quick Step",
+          "cat": "world"
+        },
+        {
+          "start": 2022,
+          "end": 2022,
+          "name": "Quick-Step Alpha Vinyl Team",
+          "cat": "world"
+        },
+        {
+          "start": 2023,
+          "end": 2026,
+          "name": "Soudal Quick-Step",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "firstYear": 2012,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2012,
+          "end": 2015,
+          "name": "Orica-GreenEDGE",
+          "cat": "world"
+        },
+        {
+          "start": 2016,
+          "end": 2016,
+          "name": "Orica-BikeExchange",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2017,
+          "name": "Orica-Scott",
+          "cat": "world"
+        },
+        {
+          "start": 2018,
+          "end": 2020,
+          "name": "Mitchelton-Scott",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2021,
+          "name": "Team BikeExchange",
+          "cat": "world"
+        },
+        {
+          "start": 2022,
+          "end": 2022,
+          "name": "Team BikeExchange Jayco",
+          "cat": "world"
+        },
+        {
+          "start": 2023,
+          "end": 2026,
+          "name": "Team Jayco AlUla",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Shimano-Memory Corp",
+          "cat": "pro"
+        },
+        {
+          "start": 2006,
+          "end": 2011,
+          "name": "Skil-Shimano",
+          "cat": "pro"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "Argos-Shimano",
+          "cat": "pro"
+        },
+        {
+          "start": 2013,
+          "end": 2013,
+          "name": "Argos-Shimano",
+          "cat": "world"
+        },
+        {
+          "start": 2014,
+          "end": 2014,
+          "name": "Giant-Shimano",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2016,
+          "name": "Giant-Alpecin",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2018,
+          "name": "Sunweb",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2020,
+          "name": "Team Sunweb",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2023,
+          "name": "Team DSM",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2024,
+          "name": "Team dsm-firmenich PostNL",
+          "cat": "world"
+        },
+        {
+          "start": 2025,
+          "end": 2026,
+          "name": "Team Picnic PostNL",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2012,
+          "name": "Rabobank",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2014,
+          "name": "Belkin",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2018,
+          "name": "Lotto NL-Jumbo",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2020,
+          "name": "Team Jumbo-Visma",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2023,
+          "name": "Jumbo-Visma",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2026,
+          "name": "Team Visma-Lease a Bike",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2008,
+          "name": "Bouygues Telecom",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "BBox Bouygues Telecom",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "BBox Bouygues Telecom",
+          "cat": "pro"
+        },
+        {
+          "start": 2011,
+          "end": 2013,
+          "name": "Team Europcar",
+          "cat": "pro"
+        },
+        {
+          "start": 2014,
+          "end": 2014,
+          "name": "Europcar",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2015,
+          "name": "Europcar",
+          "cat": "pro"
+        },
+        {
+          "start": 2016,
+          "end": 2018,
+          "name": "Direct Énergie",
+          "cat": "pro"
+        },
+        {
+          "start": 2019,
+          "end": 2020,
+          "name": "Total Direct Énergie",
+          "cat": "pro"
+        },
+        {
+          "start": 2021,
+          "end": 2026,
+          "name": "TotalEnergies",
+          "cat": "pro"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "firstYear": 2022,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2022,
+          "end": 2026,
+          "name": "Tudor",
+          "cat": "pro"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Lampre-Caffita",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2007,
+          "name": "Lampre-Fondital",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Lampre",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "Lampre-NGC",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "Lampre-Farnese Vini",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2012,
+          "name": "Lampre-ISD",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2016,
+          "name": "Lampre-Merida",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2017,
+          "name": "UAE Abu Dhabi",
+          "cat": "world"
+        },
+        {
+          "start": 2018,
+          "end": 2018,
+          "name": "UAE Emirates",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2024,
+          "name": "UAE Team Emirates",
+          "cat": "world"
+        },
+        {
+          "start": 2025,
+          "end": 2026,
+          "name": "UAE Emirates Team XRG",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "firstYear": 2020,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2020,
+          "end": 2023,
+          "name": "Uno-X",
+          "cat": "pro"
+        },
+        {
+          "start": 2024,
+          "end": 2025,
+          "name": "Uno-X Mobility",
+          "cat": "pro"
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "name": "Uno-X Mobility",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "firstYear": 2005,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Liberty Seguros",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2018,
+          "name": "Astana",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2020,
+          "name": "Astana Pro Team",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2021,
+          "name": "Astana-Premier Tech",
+          "cat": "world"
+        },
+        {
+          "start": 2022,
+          "end": 2023,
+          "name": "Astana Qazaqstan Team",
+          "cat": "world"
+        },
+        {
+          "start": 2024,
+          "end": 2024,
+          "name": "Astana Qazaqstan",
+          "cat": "world"
+        },
+        {
+          "start": 2025,
+          "end": 2026,
+          "name": "XDS Astana Team",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "firstYear": 2009,
+      "lastYear": 2020,
+      "segments": [
+        {
+          "start": 2009,
+          "end": 2016,
+          "name": "Katusha",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2018,
+          "name": "Katusha-Alpecin",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2019,
+          "name": "Team Katusha-Alpecin",
+          "cat": "world"
+        },
+        {
+          "start": 2020,
+          "end": 2020,
+          "name": "Licence Pro Tour racheté par Israel Start-Up Nation",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "firstYear": 2008,
+      "lastYear": 2022,
+      "segments": [
+        {
+          "start": 2008,
+          "end": 2009,
+          "name": "MTN",
+          "cat": "pro"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "MTN Energade",
+          "cat": "pro"
+        },
+        {
+          "start": 2011,
+          "end": 2012,
+          "name": "MTN Qhubeka",
+          "cat": "pro"
+        },
+        {
+          "start": 2013,
+          "end": 2015,
+          "name": "MTN-Qhubeka",
+          "cat": "pro"
+        },
+        {
+          "start": 2016,
+          "end": 2018,
+          "name": "Dimension Data",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2019,
+          "name": "Team Dimension Data",
+          "cat": "world"
+        },
+        {
+          "start": 2020,
+          "end": 2020,
+          "name": "NTT Pro Cycling",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2021,
+          "name": "Team Qhubeka Assos/NextHash",
+          "cat": "world"
+        },
+        {
+          "start": 2022,
+          "end": 2022,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "firstYear": 2011,
+      "lastYear": 2021,
+      "segments": [
+        {
+          "start": 2011,
+          "end": 2018,
+          "name": "BMC Racing",
+          "cat": "world"
+        },
+        {
+          "start": 2019,
+          "end": 2020,
+          "name": "CCC Team",
+          "cat": "world"
+        },
+        {
+          "start": 2021,
+          "end": 2021,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "firstYear": 2012,
+      "lastYear": 2017,
+      "segments": [
+        {
+          "start": 2012,
+          "end": 2014,
+          "name": "IAM",
+          "cat": "pro"
+        },
+        {
+          "start": 2015,
+          "end": 2016,
+          "name": "IAM",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2017,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "firstYear": 2005,
+      "lastYear": 2017,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2007,
+          "name": "CSC",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "CSC Saxo Bank",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2010,
+          "name": "Saxo Bank",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "Saxo Bank-Sungard",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "Saxo Bank-Tinkoff Bank",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2013,
+          "name": "Saxo-Tinkoff",
+          "cat": "world"
+        },
+        {
+          "start": 2014,
+          "end": 2015,
+          "name": "Tinkoff-Saxo",
+          "cat": "world"
+        },
+        {
+          "start": 2016,
+          "end": 2016,
+          "name": "Tinkoff",
+          "cat": "world"
+        },
+        {
+          "start": 2017,
+          "end": 2017,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "firstYear": 2005,
+      "lastYear": 2015,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Liquigas-Bianchi",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2009,
+          "name": "Liquigas",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "Liquigas-Doimo",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2012,
+          "name": "Liquigas-Cannondale",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2014,
+          "name": "Cannondale",
+          "cat": "world"
+        },
+        {
+          "start": 2015,
+          "end": 2015,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "firstYear": 2005,
+      "lastYear": 2014,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Fundacion Ciclista Euskadi",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2012,
+          "name": "Euskaltel-Euskadi",
+          "cat": "world"
+        },
+        {
+          "start": 2013,
+          "end": 2013,
+          "name": "Euskaltel Euskadi",
+          "cat": "world"
+        },
+        {
+          "start": 2014,
+          "end": 2014,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "firstYear": 2005,
+      "lastYear": 2013,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Fondas Imabo-Doorisol",
+          "cat": "pro"
+        },
+        {
+          "start": 2006,
+          "end": 2006,
+          "name": "Fondas-P3 Transfer",
+          "cat": "pro"
+        },
+        {
+          "start": 2007,
+          "end": 2007,
+          "name": "P3 Transfer-Fondas",
+          "cat": "pro"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "P3 Transfer-Batavus",
+          "cat": "pro"
+        },
+        {
+          "start": 2009,
+          "end": 2010,
+          "name": "Vacansoleil",
+          "cat": "pro"
+        },
+        {
+          "start": 2011,
+          "end": 2013,
+          "name": "Vacansoleil-DCM",
+          "cat": "world"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "firstYear": 2010,
+      "lastYear": 2012,
+      "segments": [
+        {
+          "start": 2010,
+          "end": 2011,
+          "name": "RadioShack",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "Fusion avec Leopard-Trek",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "firstYear": 2005,
+      "lastYear": 2012,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2007,
+          "name": "T-Mobile",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Columbia",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "Columbia-HTC",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "HTC-Columbia",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "HTC-Highroad",
+          "cat": "world"
+        },
+        {
+          "start": 2012,
+          "end": 2012,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "firstYear": 2005,
+      "lastYear": 2011,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2007,
+          "name": "Saunier Duval-Prodir",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Scott-American Beef",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "Fuji-Servetto",
+          "cat": "world"
+        },
+        {
+          "start": 2010,
+          "end": 2010,
+          "name": "Footon-Servetto",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "firstYear": 2006,
+      "lastYear": 2011,
+      "segments": [
+        {
+          "start": 2006,
+          "end": 2010,
+          "name": "Milram",
+          "cat": "world"
+        },
+        {
+          "start": 2011,
+          "end": 2011,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "firstYear": 2005,
+      "lastYear": 2009,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2008,
+          "name": "Gerolsteiner",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "firstYear": 2005,
+      "lastYear": 2008,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2007,
+          "name": "Discovery Channel",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "firstYear": 2005,
+      "lastYear": 2009,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2008,
+          "name": "Crédit agricole",
+          "cat": "world"
+        },
+        {
+          "start": 2009,
+          "end": 2009,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "firstYear": 2005,
+      "lastYear": 2006,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Domina Vacanze",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2006,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "firstYear": 2005,
+      "lastYear": 2006,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Fassa Bortolo",
+          "cat": "world"
+        },
+        {
+          "start": 2006,
+          "end": 2006,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "firstYear": 2005,
+      "lastYear": 2007,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2006,
+          "name": "Phonak",
+          "cat": "world"
+        },
+        {
+          "start": 2007,
+          "end": 2007,
+          "name": "Disparition",
+          "cat": "special"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "firstYear": 2005,
+      "lastYear": 2008,
+      "segments": [
+        {
+          "start": 2005,
+          "end": 2005,
+          "name": "Mr Bookmaker-Sports Tech",
+          "cat": "pro"
+        },
+        {
+          "start": 2006,
+          "end": 2006,
+          "name": "Unibet.com",
+          "cat": "pro"
+        },
+        {
+          "start": 2007,
+          "end": 2007,
+          "name": "Unibet.com",
+          "cat": "world"
+        },
+        {
+          "start": 2008,
+          "end": 2008,
+          "name": "Cycle Collstrop",
+          "cat": "pro"
+        }
+      ]
+    }
+  ]
+};
