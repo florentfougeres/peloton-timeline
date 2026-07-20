@@ -136,15 +136,29 @@
       "segments": [
         {
           "start": 2005,
+          "end": 2008,
+          "name": "Cofidis-Le Crédit par Téléphone",
+          "cat": "world",
+          "country": "FR"
+        },
+        {
+          "start": 2009,
           "end": 2009,
-          "name": "Cofidis",
+          "name": "Cofidis, le Crédit en Ligne",
           "cat": "world",
           "country": "FR"
         },
         {
           "start": 2010,
+          "end": 2012,
+          "name": "Cofidis, le Crédit en Ligne",
+          "cat": "pro",
+          "country": "FR"
+        },
+        {
+          "start": 2013,
           "end": 2019,
-          "name": "Cofidis",
+          "name": "Cofidis, Solutions Crédits",
           "cat": "pro",
           "country": "FR"
         },
