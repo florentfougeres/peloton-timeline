@@ -10,9 +10,11 @@
   // jusqu'en 2014, puis désigne la 2e division depuis 2020. On garde donc
   // deux couleurs fixes (monde/pro = niveau 1/niveau 2) mais l'intitulé
   // affiché dépend de l'année du segment.
+  const DIVISION_BOUNDARIES = { world: [2005, 2015], pro: [2005, 2020] };
+
   function divisionName(cat, year) {
-    if (cat === 'world') return year <= 2014 ? 'UCI ProTeam' : 'UCI WorldTeam';
-    if (cat === 'pro') return year <= 2019 ? 'Continentale Pro' : 'UCI ProTeam';
+    if (cat === 'world') return year < 2005 ? 'Groupe Sportif I' : year <= 2014 ? 'UCI ProTeam' : 'UCI WorldTeam';
+    if (cat === 'pro') return year < 2005 ? 'Groupe Sportif II' : year <= 2019 ? 'Continentale Pro' : 'UCI ProTeam';
     return null;
   }
 
@@ -20,15 +22,17 @@
   // stable (nécessaire quand un même sponsor traverse un changement de
   // nomenclature UCI, ex. AG2R La Mondiale 2008-2020).
   function divisionPeriods(seg) {
-    const boundary = seg.cat === 'world' ? 2015 : seg.cat === 'pro' ? 2020 : null;
-    if (boundary == null) return [];
-    if (seg.start >= boundary || seg.end < boundary) {
-      return [{ start: seg.start, end: seg.end, label: divisionName(seg.cat, seg.start) }];
+    const boundaries = DIVISION_BOUNDARIES[seg.cat];
+    if (!boundaries) return [];
+    const cuts = boundaries.filter((b) => b > seg.start && b <= seg.end);
+    const points = [seg.start, ...cuts, seg.end + 1];
+    const periods = [];
+    for (let i = 0; i < points.length - 1; i++) {
+      const start = points[i];
+      const end = points[i + 1] - 1;
+      periods.push({ start, end, label: divisionName(seg.cat, start) });
     }
-    return [
-      { start: seg.start, end: boundary - 1, label: divisionName(seg.cat, seg.start) },
-      { start: boundary, end: seg.end, label: divisionName(seg.cat, boundary) },
-    ];
+    return periods;
   }
 
   // Noms français des pays de licence UCI présents dans data.json, pour l'info-bulle du drapeau.
