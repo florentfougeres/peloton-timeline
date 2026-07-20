@@ -276,6 +276,55 @@ main {
   text-align: center;
 }
 
+.division-note {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.division-note summary {
+  cursor: pointer;
+  text-align: center;
+  color: var(--text-faint);
+  list-style: none;
+}
+.division-note summary::-webkit-details-marker { display: none; }
+.division-note summary:hover { color: var(--text-dim); }
+.division-note summary::after { content: ' ▾'; }
+.division-note[open] summary::after { content: ' ▴'; }
+
+.division-note p {
+  margin: 10px 0 8px;
+  color: var(--text-faint);
+}
+
+.division-note table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.division-note th,
+.division-note td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 11.5px;
+}
+
+.division-note th {
+  color: var(--text-faint);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: .03em;
+}
+
+.division-note tbody tr:last-child td { border-bottom: none; }
+
 .axis-caption {
   display: flex;
   justify-content: space-between;
