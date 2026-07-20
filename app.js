@@ -16,10 +16,11 @@
     ZA: 'Afrique du Sud',
   };
 
-  function flagEmoji(code) {
-    if (!code || code.length !== 2) return '';
-    const points = [...code.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65);
-    return String.fromCodePoint(...points);
+  const FLAG_CDN = 'https://cdn.jsdelivr.net/npm/circle-flags@2/flags/';
+
+  function flagImg(code, title) {
+    const src = `${FLAG_CDN}${code.toLowerCase()}.svg`;
+    return `<img class="ti-flag" src="${src}" width="15" height="15" alt="${escapeHtml(title)}" title="${escapeHtml(title)}" loading="lazy" />`;
   }
 
   function normalize(str) {
@@ -194,7 +195,7 @@
       : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
 
     function flagTitle(code) {
-      return `Licence UCI : ${escapeHtml(COUNTRY_NAME[code] || code)}`;
+      return `Licence UCI : ${COUNTRY_NAME[code] || code}`;
     }
 
     function renderFlags(seg) {
@@ -202,11 +203,11 @@
         return seg.countryPeriods
           .map((p) => {
             const py = p.start === p.end ? `${p.start}` : `${p.start}–${p.end}`;
-            return `<span class="ti-flag" title="${flagTitle(p.country)} (${py})">${flagEmoji(p.country)}</span>`;
+            return flagImg(p.country, `${flagTitle(p.country)} (${py})`);
           })
           .join('');
       }
-      return seg.country ? `<span class="ti-flag" title="${flagTitle(seg.country)}">${flagEmoji(seg.country)}</span>` : '';
+      return seg.country ? flagImg(seg.country, flagTitle(seg.country)) : '';
     }
 
     const items = l.segs
