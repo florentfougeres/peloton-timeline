@@ -5,7 +5,31 @@
   const maxYear = Math.max(...years);
   const minYear = Math.min(...years);
 
-  const CAT_LABEL = { world: 'World Team', pro: 'Pro Team' };
+  // L'UCI a renommé ses divisions au fil du temps, et le même nom a parfois
+  // désigné des niveaux différents : "UCI ProTeam" était la 1ère division
+  // jusqu'en 2014, puis désigne la 2e division depuis 2020. On garde donc
+  // deux couleurs fixes (monde/pro = niveau 1/niveau 2) mais l'intitulé
+  // affiché dépend de l'année du segment.
+  function divisionName(cat, year) {
+    if (cat === 'world') return year <= 2014 ? 'UCI ProTeam' : 'UCI WorldTeam';
+    if (cat === 'pro') return year <= 2019 ? 'Continentale Pro' : 'UCI ProTeam';
+    return null;
+  }
+
+  // Découpe un segment en périodes ayant chacune un intitulé de division
+  // stable (nécessaire quand un même sponsor traverse un changement de
+  // nomenclature UCI, ex. AG2R La Mondiale 2008-2020).
+  function divisionPeriods(seg) {
+    const boundary = seg.cat === 'world' ? 2015 : seg.cat === 'pro' ? 2020 : null;
+    if (boundary == null) return [];
+    if (seg.start >= boundary || seg.end < boundary) {
+      return [{ start: seg.start, end: seg.end, label: divisionName(seg.cat, seg.start) }];
+    }
+    return [
+      { start: seg.start, end: boundary - 1, label: divisionName(seg.cat, seg.start) },
+      { start: boundary, end: seg.end, label: divisionName(seg.cat, boundary) },
+    ];
+  }
 
   // Noms français des pays de licence UCI présents dans data.json, pour l'info-bulle du drapeau.
   const COUNTRY_NAME = {
@@ -148,7 +172,7 @@
       .map((l) => {
         const dotClass = l.status === 'world' ? 'dot-world' : l.status === 'pro' ? 'dot-pro' : 'dot-gone';
         const badgeClass = l.status === 'world' ? 'badge-world' : l.status === 'pro' ? 'badge-pro' : 'badge-gone';
-        const badgeLabel = l.status === 'world' ? 'World Team' : l.status === 'pro' ? 'Pro Team' : 'Disparue';
+        const badgeLabel = l.status === 'gone' ? 'Disparue' : divisionName(l.status, maxYear);
         const meta = l.activeNow
           ? `Depuis ${l.firstYear} · ${l.seasons} saisons`
           : l.isSpecialEnd
@@ -199,7 +223,7 @@
 
   function openModal(l, focusIdx) {
     const subtitle = l.activeNow
-      ? `Active en ${maxYear} · ${CAT_LABEL[l.status]} · ${l.seasons} saisons depuis ${l.firstYear}`
+      ? `Active en ${maxYear} · ${divisionName(l.status, maxYear)} · ${l.seasons} saisons depuis ${l.firstYear}`
       : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
 
     function renderFlags(seg) {
@@ -214,10 +238,23 @@
       return seg.country ? flagImg(seg.country, flagTitle(seg.country)) : '';
     }
 
+    function renderBadges(seg) {
+      const periods = divisionPeriods(seg);
+      if (periods.length === 0) return '';
+      const spans = periods
+        .map((p) => {
+          const py = p.start === p.end ? `${p.start}` : `${p.start}–${p.end}`;
+          const withYears = p.start !== seg.start || p.end !== seg.end;
+          return `<span class="ti-badge cat-${seg.cat}">${p.label}${withYears ? ` · ${py}` : ''}</span>`;
+        })
+        .join('');
+      return `<div class="ti-badges">${spans}</div>`;
+    }
+
     const items = l.segs
       .map((seg, idx) => {
         const yrs = seg.start === seg.end ? `${seg.start}` : `${seg.start}–${seg.end}`;
-        const badge = seg.cat === 'special' ? '' : `<span class="ti-badge cat-${seg.cat}">${CAT_LABEL[seg.cat]}</span>`;
+        const badge = renderBadges(seg);
         return `
         <div class="timeline-item cat-${seg.cat}" data-idx="${idx}">
           <div class="ti-years">${yrs}</div>

@@ -560,9 +560,15 @@ main {
   object-fit: cover;
 }
 
+.ti-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
 .timeline-item .ti-badge {
   display: inline-block;
-  margin-top: 5px;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
