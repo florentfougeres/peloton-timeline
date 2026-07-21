@@ -61,9 +61,7 @@
     return `Licence UCI : ${COUNTRY_NAME[code] || code}`;
   }
 
-  // Pays de la licence la plus récente d'un segment (dernière période si elle a changé en cours de route).
   function latestCountryCode(seg) {
-    if (seg.countryPeriods) return seg.countryPeriods[seg.countryPeriods.length - 1].country;
     return seg.country || null;
   }
 
@@ -236,14 +234,6 @@
       : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
 
     function renderFlags(seg) {
-      if (seg.countryPeriods) {
-        return seg.countryPeriods
-          .map((p) => {
-            const py = p.start === p.end ? `${p.start}` : `${p.start}–${p.end}`;
-            return flagImg(p.country, `${flagTitle(p.country)} (${py})`);
-          })
-          .join('');
-      }
       return seg.country ? flagImg(seg.country, flagTitle(seg.country)) : '';
     }
 

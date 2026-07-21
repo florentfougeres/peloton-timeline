@@ -2131,21 +2131,17 @@
       "segments": [
         {
           "start": 2006,
+          "end": 2007,
+          "name": "Milram",
+          "cat": "world",
+          "country": "IT"
+        },
+        {
+          "start": 2008,
           "end": 2010,
           "name": "Milram",
           "cat": "world",
-          "countryPeriods": [
-            {
-              "start": 2006,
-              "end": 2007,
-              "country": "IT"
-            },
-            {
-              "start": 2008,
-              "end": 2010,
-              "country": "DE"
-            }
-          ]
+          "country": "DE"
         },
         {
           "start": 2011,
