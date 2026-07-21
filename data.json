@@ -671,21 +671,17 @@
         },
         {
           "start": 2023,
+          "end": 2025,
+          "name": "Lidl-Trek",
+          "cat": "world",
+          "country": "US"
+        },
+        {
+          "start": 2026,
           "end": 2026,
           "name": "Lidl-Trek",
           "cat": "world",
-          "countryPeriods": [
-            {
-              "start": 2023,
-              "end": 2025,
-              "country": "US"
-            },
-            {
-              "start": 2026,
-              "end": 2026,
-              "country": "DE"
-            }
-          ]
+          "country": "DE"
         }
       ]
     },
