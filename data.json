@@ -192,9 +192,30 @@
     },
     {
       "id": 5,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2000,
+          "name": "AG2R Prévoyance",
+          "cat": "world",
+          "country": "FR"
+        },
+        {
+          "start": 2001,
+          "end": 2001,
+          "name": "AG2R Prévoyance",
+          "cat": "pro",
+          "country": "FR"
+        },
+        {
+          "start": 2002,
+          "end": 2004,
+          "name": "AG2R Prévoyance",
+          "cat": "world",
+          "country": "FR"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -519,9 +540,37 @@
     },
     {
       "id": 9,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2000,
+          "name": "La Française des jeux",
+          "cat": "world",
+          "country": "FR"
+        },
+        {
+          "start": 2001,
+          "end": 2001,
+          "name": "La Française des jeux",
+          "cat": "pro",
+          "country": "FR"
+        },
+        {
+          "start": 2002,
+          "end": 2002,
+          "name": "La Française des jeux",
+          "cat": "world",
+          "country": "FR"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "Fdjeux.com",
+          "cat": "world",
+          "country": "FR"
+        },
         {
           "start": 2005,
           "end": 2009,
@@ -642,9 +691,23 @@
     },
     {
       "id": 11,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2002,
+          "name": "Lotto-Adecco",
+          "cat": "world",
+          "country": "BE"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "Lotto-Domo",
+          "cat": "world",
+          "country": "BE"
+        },
         {
           "start": 2005,
           "end": 2006,
@@ -712,9 +775,30 @@
     },
     {
       "id": 12,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2000,
+          "name": "Banesto",
+          "cat": "world",
+          "country": "ES"
+        },
+        {
+          "start": 2001,
+          "end": 2003,
+          "name": "iBanesto.com",
+          "cat": "world",
+          "country": "ES"
+        },
+        {
+          "start": 2004,
+          "end": 2004,
+          "name": "Illes Balears-Banesto",
+          "cat": "world",
+          "country": "ES"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -915,9 +999,23 @@
     },
     {
       "id": 17,
-      "firstYear": 2005,
+      "firstYear": 2001,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2001,
+          "end": 2002,
+          "name": "Domo-Farm Frites",
+          "cat": "world",
+          "country": "BE"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "Quick Step-Davitamon",
+          "cat": "world",
+          "country": "BE"
+        },
         {
           "start": 2005,
           "end": 2007,
@@ -1034,9 +1132,30 @@
     },
     {
       "id": 19,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2002,
+          "name": "Bankgiroloterij-Batavus",
+          "cat": "pro",
+          "country": "NL"
+        },
+        {
+          "start": 2003,
+          "end": 2003,
+          "name": "Bankgiroloterij",
+          "cat": "pro",
+          "country": "NL"
+        },
+        {
+          "start": 2004,
+          "end": 2004,
+          "name": "Bankgiroloterij",
+          "cat": "world",
+          "country": "NL"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -1118,11 +1237,11 @@
     },
     {
       "id": 20,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
         {
-          "start": 2005,
+          "start": 2000,
           "end": 2012,
           "name": "Rabobank",
           "cat": "world",
@@ -1167,9 +1286,30 @@
     },
     {
       "id": 21,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2001,
+          "name": "Bonjour",
+          "cat": "pro",
+          "country": "FR"
+        },
+        {
+          "start": 2002,
+          "end": 2002,
+          "name": "Bonjour",
+          "cat": "world",
+          "country": "FR"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "Brioches La Boulangère",
+          "cat": "world",
+          "country": "FR"
+        },
         {
           "start": 2005,
           "end": 2008,
@@ -1251,9 +1391,23 @@
     },
     {
       "id": 23,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2002,
+          "name": "Lampre-Daikin",
+          "cat": "world",
+          "country": "IT"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "Lampre",
+          "cat": "world",
+          "country": "IT"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -1363,11 +1517,25 @@
     },
     {
       "id": 25,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2026,
       "segments": [
         {
-          "start": 2005,
+          "start": 2000,
+          "end": 2000,
+          "name": "ONCE-Deutsche Bank",
+          "cat": "world",
+          "country": "ES"
+        },
+        {
+          "start": 2001,
+          "end": 2003,
+          "name": "ONCE-Eroski",
+          "cat": "world",
+          "country": "ES"
+        },
+        {
+          "start": 2004,
           "end": 2005,
           "name": "Liberty Seguros",
           "cat": "world",
@@ -1576,9 +1744,30 @@
     },
     {
       "id": 30,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2017,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2000,
+          "name": "Memory Card-Jack & Jones",
+          "cat": "world",
+          "country": "DK"
+        },
+        {
+          "start": 2001,
+          "end": 2002,
+          "name": "CSC-Tiscali",
+          "cat": "world",
+          "country": "DK"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "Team CSC",
+          "cat": "world",
+          "country": "DK"
+        },
         {
           "start": 2005,
           "end": 2007,
@@ -1645,9 +1834,30 @@
     },
     {
       "id": 31,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2015,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2001,
+          "name": "Alessio",
+          "cat": "pro",
+          "country": "IT"
+        },
+        {
+          "start": 2002,
+          "end": 2003,
+          "name": "Alessio",
+          "cat": "world",
+          "country": "IT"
+        },
+        {
+          "start": 2004,
+          "end": 2004,
+          "name": "Alessio-Bianchi",
+          "cat": "world",
+          "country": "IT"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -1693,9 +1903,23 @@
     },
     {
       "id": 32,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2014,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2000,
+          "name": "Euskaltel-Euskadi",
+          "cat": "pro",
+          "country": "ES"
+        },
+        {
+          "start": 2001,
+          "end": 2004,
+          "name": "Euskaltel-Euskadi",
+          "cat": "world",
+          "country": "ES"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -1796,9 +2020,30 @@
     },
     {
       "id": 35,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2012,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2001,
+          "name": "Team Deutsche Telekom",
+          "cat": "world",
+          "country": "DE"
+        },
+        {
+          "start": 2002,
+          "end": 2003,
+          "name": "Team Telekom",
+          "cat": "world",
+          "country": "DE"
+        },
+        {
+          "start": 2004,
+          "end": 2004,
+          "name": "T-Mobile Team",
+          "cat": "world",
+          "country": "DE"
+        },
         {
           "start": 2005,
           "end": 2007,
@@ -1844,11 +2089,11 @@
     },
     {
       "id": 36,
-      "firstYear": 2005,
+      "firstYear": 2004,
       "lastYear": 2011,
       "segments": [
         {
-          "start": 2005,
+          "start": 2004,
           "end": 2007,
           "name": "Saunier Duval-Prodir",
           "cat": "world",
@@ -1916,11 +2161,18 @@
     },
     {
       "id": 38,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2009,
       "segments": [
         {
-          "start": 2005,
+          "start": 2000,
+          "end": 2001,
+          "name": "Gerolsteiner",
+          "cat": "pro",
+          "country": "DE"
+        },
+        {
+          "start": 2002,
           "end": 2008,
           "name": "Gerolsteiner",
           "cat": "world",
@@ -1936,9 +2188,23 @@
     },
     {
       "id": 39,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2008,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2002,
+          "name": "US Postal Service",
+          "cat": "world",
+          "country": "US"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "name": "US Postal Service-Berry Floor",
+          "cat": "world",
+          "country": "US"
+        },
         {
           "start": 2005,
           "end": 2007,
@@ -1956,11 +2222,18 @@
     },
     {
       "id": 40,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2009,
       "segments": [
         {
-          "start": 2005,
+          "start": 2000,
+          "end": 2000,
+          "name": "Crédit agricole",
+          "cat": "pro",
+          "country": "FR"
+        },
+        {
+          "start": 2001,
           "end": 2008,
           "name": "Crédit agricole",
           "cat": "world",
@@ -1976,9 +2249,30 @@
     },
     {
       "id": 41,
-      "firstYear": 2005,
+      "firstYear": 2001,
       "lastYear": 2006,
       "segments": [
+        {
+          "start": 2001,
+          "end": 2002,
+          "name": "De Nardi-Pasta Montegrappa",
+          "cat": "pro",
+          "country": "IT"
+        },
+        {
+          "start": 2003,
+          "end": 2003,
+          "name": "De Nardi-Colpack",
+          "cat": "pro",
+          "country": "IT"
+        },
+        {
+          "start": 2004,
+          "end": 2004,
+          "name": "De Nardi-Piemme Telecom",
+          "cat": "world",
+          "country": "IT"
+        },
         {
           "start": 2005,
           "end": 2005,
@@ -1996,11 +2290,11 @@
     },
     {
       "id": 42,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2006,
       "segments": [
         {
-          "start": 2005,
+          "start": 2000,
           "end": 2005,
           "name": "Fassa Bortolo",
           "cat": "world",
@@ -2016,11 +2310,18 @@
     },
     {
       "id": 43,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2007,
       "segments": [
         {
-          "start": 2005,
+          "start": 2000,
+          "end": 2001,
+          "name": "Phonak",
+          "cat": "pro",
+          "country": "CH"
+        },
+        {
+          "start": 2002,
           "end": 2006,
           "name": "Phonak",
           "cat": "world",
@@ -2036,9 +2337,37 @@
     },
     {
       "id": 44,
-      "firstYear": 2005,
+      "firstYear": 2000,
       "lastYear": 2008,
       "segments": [
+        {
+          "start": 2000,
+          "end": 2000,
+          "name": "Palmans-Ideal",
+          "cat": "pro",
+          "country": "BE"
+        },
+        {
+          "start": 2001,
+          "end": 2001,
+          "name": "Collstrop-Palmans",
+          "cat": "pro",
+          "country": "BE"
+        },
+        {
+          "start": 2002,
+          "end": 2003,
+          "name": "Palmans-Collstrop",
+          "cat": "pro",
+          "country": "BE"
+        },
+        {
+          "start": 2004,
+          "end": 2004,
+          "name": "Mr Bookmaker-Palmans-Collstrop",
+          "cat": "pro",
+          "country": "BE"
+        },
         {
           "start": 2005,
           "end": 2005,
