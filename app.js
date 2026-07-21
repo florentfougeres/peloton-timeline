@@ -1,5 +1,15 @@
 (async function () {
-  const DATA = await (await fetch('data.json')).json();
+  let DATA;
+  try {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    DATA = await res.json();
+  } catch (err) {
+    console.error('Échec du chargement de data.json', err);
+    document.getElementById('teamList').hidden = true;
+    document.getElementById('loadError').hidden = false;
+    return;
+  }
 
   const years = DATA.years;
   const maxYear = Math.max(...years);
@@ -26,6 +36,22 @@
   // Découpe un segment en périodes ayant chacune un intitulé de division
   // stable (nécessaire quand un même sponsor traverse un changement de
   // nomenclature UCI, ex. AG2R La Mondiale 2008-2020).
+  // Génère le tableau d'aide (section "Pourquoi le même nom change parfois
+  // de couleur ?") à partir de DIVISION_BOUNDARIES, pour ne pas dupliquer
+  // ces bornes dans le HTML statique.
+  function renderDivisionTable() {
+    const boundaries = [...new Set([...DIVISION_BOUNDARIES.world, ...DIVISION_BOUNDARIES.pro])].sort((a, b) => a - b);
+    const points = [-Infinity, ...boundaries, Infinity];
+    const rows = points.slice(0, -1).map((start, i) => {
+      const end = points[i + 1];
+      const sampleYear = start === -Infinity ? end - 1 : start;
+      const period =
+        start === -Infinity ? `Avant ${end}` : end === Infinity ? `Depuis ${start}` : start === end - 1 ? `${start}` : `${start}–${end - 1}`;
+      return `<tr><td>${period}</td><td>${divisionName('world', sampleYear)}</td><td>${divisionName('pro', sampleYear)}</td></tr>`;
+    });
+    document.getElementById('divisionTableBody').innerHTML = rows.join('');
+  }
+
   function divisionPeriods(seg) {
     const boundaries = DIVISION_BOUNDARIES[seg.cat];
     if (!boundaries) return [];
@@ -54,7 +80,9 @@
   function flagImg(code, title, extraClass) {
     const src = `${FLAG_CDN}${code.toLowerCase()}.svg`;
     const cls = extraClass ? `ti-flag ${extraClass}` : 'ti-flag';
-    return `<img class="${cls}" src="${src}" width="15" height="15" alt="${escapeHtml(title)}" title="${escapeHtml(title)}" loading="lazy" />`;
+    // Le CDN de drapeaux peut être injoignable (bloqueur, réseau) : on masque
+    // l'image plutôt que d'afficher une icône cassée.
+    return `<img class="${cls}" src="${src}" width="15" height="15" alt="${escapeHtml(title)}" title="${escapeHtml(title)}" loading="lazy" onerror="this.style.display='none'" />`;
   }
 
   function flagTitle(code) {
@@ -105,6 +133,8 @@
       displayName: lastReal.name,
     };
   });
+
+  document.getElementById('footerCount').textContent = lineages.length;
 
   // ---------- Filtering / sorting state ----------
 
@@ -160,7 +190,8 @@
     l.segs.forEach((seg, idx) => {
       const duration = seg.end - seg.start + 1;
       const name = escapeHtml(seg.name);
-      html += `<div class="bar-seg seg-${seg.cat}" style="flex-grow:${duration}" data-idx="${idx}" title="${name} (${seg.start}–${seg.end})"><span class="bar-seg-label">${name}</span></div>`;
+      const yrs = `${seg.start}–${seg.end}`;
+      html += `<div class="bar-seg seg-${seg.cat}" style="flex-grow:${duration}" data-idx="${idx}" title="${name} (${yrs})" tabindex="0" role="button" aria-label="${name}, ${yrs}"><span class="bar-seg-label">${name}</span></div>`;
     });
     if (trailSpace > 0) html += `<div class="bar-spacer" style="flex-grow:${trailSpace}"></div>`;
     return html;
@@ -190,7 +221,7 @@
         const cardFlag = countryCode ? flagImg(countryCode, flagTitle(countryCode), 'card-flag') : '';
 
         return `
-        <article class="card" data-id="${l.id}">
+        <article class="card" data-id="${l.id}" tabindex="0" role="button" aria-label="${escapeHtml(l.displayName)}, ${escapeHtml(meta)}">
           <div class="card-head">
             <div class="card-head-left">
               <span class="dot ${dotClass}"></span>
@@ -208,16 +239,29 @@
       })
       .join('');
 
+    function activateOnKey(el, handler) {
+      el.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        handler(e);
+      });
+    }
+
     teamList.querySelectorAll('.card').forEach((card) => {
       const l = lineages.find((x) => x.id === Number(card.dataset.id));
       if (!l) return;
 
-      card.addEventListener('click', () => openModal(l));
+      card.addEventListener('click', () => openModal(l, null, card));
+      activateOnKey(card, () => openModal(l, null, card));
 
       card.querySelectorAll('.bar-seg').forEach((segEl) => {
         segEl.addEventListener('click', (e) => {
           e.stopPropagation();
-          openModal(l, Number(segEl.dataset.idx));
+          openModal(l, Number(segEl.dataset.idx), segEl);
+        });
+        activateOnKey(segEl, (e) => {
+          e.stopPropagation();
+          openModal(l, Number(segEl.dataset.idx), segEl);
         });
       });
     });
@@ -227,8 +271,32 @@
 
   const modalBackdrop = document.getElementById('modalBackdrop');
   const modalContent = document.getElementById('modalContent');
+  const modalEl = document.querySelector('.modal');
+  let lastFocusedEl = null;
 
-  function openModal(l, focusIdx) {
+  function focusableEls() {
+    return Array.from(modalEl.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(
+      (el) => !el.disabled && el.offsetParent !== null
+    );
+  }
+
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    const els = focusableEls();
+    if (els.length === 0) return;
+    const first = els[0];
+    const last = els[els.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  function openModal(l, focusIdx, triggerEl) {
+    lastFocusedEl = triggerEl || document.activeElement;
     const subtitle = l.activeNow
       ? `Active en ${maxYear} · ${divisionName(l.status, maxYear)} · ${l.seasons} saisons depuis ${l.firstYear}`
       : `Inactive depuis ${l.lastYear} · ${l.seasons} saisons entre ${l.firstYear} et ${l.lastYear}`;
@@ -264,12 +332,14 @@
       .join('');
 
     modalContent.innerHTML = `
-      <h2>${escapeHtml(l.displayName)}</h2>
+      <h2 id="modalTitle">${escapeHtml(l.displayName)}</h2>
       <p class="modal-sub">${subtitle}</p>
       <div class="timeline-list">${items}</div>
     `;
     modalBackdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', trapFocus);
+    modalEl.focus();
 
     if (focusIdx != null) {
       const target = modalContent.querySelector(`.timeline-item[data-idx="${focusIdx}"]`);
@@ -283,6 +353,9 @@
   function closeModal() {
     modalBackdrop.classList.remove('open');
     document.body.style.overflow = '';
+    document.removeEventListener('keydown', trapFocus);
+    if (lastFocusedEl) lastFocusedEl.focus();
+    lastFocusedEl = null;
   }
 
   document.getElementById('modalClose').addEventListener('click', closeModal);
@@ -290,7 +363,7 @@
     if (e.target === modalBackdrop) closeModal();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) closeModal();
   });
 
   // ---------- Controls ----------
@@ -346,5 +419,6 @@
 
   // ---------- Init ----------
 
+  renderDivisionTable();
   render();
 })();

@@ -358,6 +358,7 @@ main {
   box-shadow: var(--shadow);
 }
 .card:active { transform: translateY(0); }
+.card:focus-visible { outline: 2px solid var(--world-deep); outline-offset: 2px; }
 
 .card-head {
   display: flex;
@@ -452,6 +453,8 @@ main {
   text-overflow: ellipsis;
 }
 .bar-seg:last-child { border-right: none; }
+/* négatif pour rester visible malgré overflow:hidden sur .bar */
+.bar-seg:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
 
 .bar-seg.seg-world {
   background: var(--world-deep);
@@ -528,6 +531,9 @@ main {
   font-size: 13px;
 }
 .modal-close:hover { color: var(--text); }
+.modal-close:focus-visible { outline: 2px solid var(--world-deep); outline-offset: 2px; }
+
+.modal:focus { outline: none; }
 
 .modal h2 {
   font-size: 22px;
