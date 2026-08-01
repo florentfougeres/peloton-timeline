@@ -2389,6 +2389,41 @@
           "country": "BE"
         }
       ]
+    },
+    {
+      "id": 45,
+      "firstYear": 2018,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2018,
+          "end": 2019,
+          "name": "Fundación Euskadi",
+          "cat": "pro",
+          "country": "ES"
+        },
+        {
+          "start": 2020,
+          "end": 2026,
+          "name": "Euskaltel-Euskadi",
+          "cat": "pro",
+          "country": "ES"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "firstYear": 2020,
+      "lastYear": 2026,
+      "segments": [
+        {
+          "start": 2000,
+          "end": 2026,
+          "name": "Kern Pharma",
+          "cat": "pro",
+          "country": "ES"
+        }
+      ]
     }
   ]
 }
